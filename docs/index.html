@@ -68,6 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -121,6 +124,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#process" id="toc-process" class="nav-link active" data-scroll-target="#process">Process</a></li>
+  <li><a href="#further-information" id="toc-further-information" class="nav-link" data-scroll-target="#further-information">Further Information</a></li>
   </ul>
 </nav>
     </div>
@@ -147,9 +151,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website provides relevant information regarding the Data and Code Sharing Policy and pre-acceptance reproducibility checks implemented at the RFS.</p>
+<p>This website provides key information about the <strong>Data and Code Sharing Policy</strong> (CDSP) and the pre-acceptance reproducibility checks implemented at the <em>Review of Financial Studies</em> (RFS).</p>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
+<p>The diagram below illustrates how authors interact with the CDSP and the RFS <em>Data Editors</em> (DE) throughout the editorial process.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": { "fontSize": "24px"}}}%%
+flowchart LR
+    subgraph Editors["**Editors**"]
+        A[Submission]
+        B[Revisions]
+        C["Conditional Accept"]
+        D[Accept]
+    end
+
+    subgraph DataEditors["**Data Editors**"]
+        E[Onboarding]
+        F[Review]
+        G[Certification]
+    end
+
+    A --&gt; B --&gt; C
+    C -.-&gt; D
+
+    C --&gt; E --&gt; F --&gt; G --&gt; D
+
+    style A fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style E fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style F fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style G fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style D fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Submission</strong>: Please read the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>. Any requests for exemption from the CDSP must be made at the time of initial submission.</li>
+<li><strong>Onboarding</strong>: All conditionally accepted manuscripts enter the data editing process. Upon conditional acceptance, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified.</li>
+<li><strong>Review</strong>: Authors must prepare a replication package in compliance with the CDSP and submit it via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The package remains private during the review phase. The DE will configure the package in a secure, dedicated virtual environment provided by the RFS. Authors must supply all necessary data to this environment. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly with the submitting author.</li>
+<li><strong>Certification</strong>: If the replication package successfully reproduces the key tables and figures from the submission, the DE will notify the handling editor of successful certification.</li>
+<li><strong>Accept</strong>: Upon final acceptance, authors must update and publish their replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The DE will then host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
+</ul>
+</section>
+<section id="further-information" class="level2">
+<h2 class="anchored" data-anchor-id="further-information">Further Information</h2>
+<ul>
+<li>The DE maintain a list of common questions in the <a href="./faqs.html">FAQs</a></li>
+<li>The DE also provide detailed guidance on <a href="./license.html">licensing and recommended practices</a>.</li>
+</ul>
 
 
 </section>

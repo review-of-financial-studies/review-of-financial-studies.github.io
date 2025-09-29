@@ -1,1 +1,15 @@
 /* css styles */
+:root {
+    --mermaid-bg-color: #fff;
+    --mermaid-edge-color: black;
+    --mermaid-node-fg-color: black;
+    --mermaid-fg-color--lightest: #fff;
+    --mermaid-label-bg-color: black;
+    --mermaid-label-fg-color: black;
+    --mermaid-node-bg-color: black;
+    --mermaid-node-bg-color: #fff;
+}
+
+.navbar {
+    background-color: #2a6197;
+}

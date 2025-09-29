@@ -3,7 +3,47 @@ title: "Review of Financial Studies"
 subtitle: "Data Editor Website"
 ---
 
-This website provides relevant information regarding the Data and Code Sharing Policy and pre-acceptance reproducibility checks implemented at the RFS.
+This website provides key information about the **Data and Code Sharing Policy** (CDSP) and the pre-acceptance reproducibility checks implemented at the *Review of Financial Studies* (RFS).
 
 ## Process
 
+The diagram below illustrates how authors interact with the CDSP and the RFS *Data Editors* (DE) throughout the editorial process.
+
+```{mermaid}
+%%{init: {"themeVariables": { "fontSize": "24px"}}}%%
+flowchart LR
+    subgraph Editors["**Editors**"]
+        A[Submission]
+        B[Revisions]
+        C["Conditional Accept"]
+        D[Accept]
+    end
+
+    subgraph DataEditors["**Data Editors**"]
+        E[Onboarding]
+        F[Review]
+        G[Certification]
+    end
+
+    A --> B --> C
+    C -.-> D
+
+    C --> E --> F --> G --> D
+
+    style A fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style E fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style F fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style G fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+    style D fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
+```
+
+- **Submission**: Please read the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/). Any requests for exemption from the CDSP must be made at the time of initial submission.
+- **Onboarding**: All conditionally accepted manuscripts enter the data editing process. Upon conditional acceptance, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified.
+- **Review**:  Authors must prepare a replication package in compliance with the CDSP and submit it via the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). The package remains private during the review phase. The DE will configure the package in a secure, dedicated virtual environment provided by the RFS. Authors must supply all necessary data to this environment. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly with the submitting author.
+- **Certification**: If the replication package successfully reproduces the key tables and figures from the submission, the DE will notify the handling editor of successful certification.
+- **Accept**: Upon final acceptance, authors must update and publish their replication package in the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). The DE will then host the verified code and accompanying report in a public GitHub repository under the [RFS organization](https://github.com/review-of-financial-studies).
+
+## Further Information
+
+- The DE maintain a list of common questions in the [FAQs](faqs.qmd)
+- The DE also provide detailed guidance on [licensing and recommended practices](license.qmd).
