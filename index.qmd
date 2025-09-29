@@ -45,5 +45,9 @@ flowchart LR
 
 ## Further Information
 
-- The DE maintain a list of common questions in the [FAQs](faqs.qmd)
+- The DE maintain a list of common questions in the [FAQs](faqs.qmd).
 - The DE also provide detailed guidance on [licensing and recommended practices](license.qmd).
+
+## Contact
+
+If you have any questions about the CDSP of the RFS and the above review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.

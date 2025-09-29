@@ -25,7 +25,7 @@
     "href": "faqs.html",
     "title": "Frequently Asked Questions",
     "section": "",
-    "text": "Coming soon …"
+    "text": "If you have any questions about the Data and Code Sharing Policy (CDSP) of the Review of Financial Studies (RFS) and its review process, please reach out to dataeditor@sfs.org.\nComing soon …"
   },
   {
     "objectID": "index.html",
@@ -46,6 +46,13 @@
     "href": "index.html#further-information",
     "title": "Review of Financial Studies",
     "section": "Further Information",
-    "text": "Further Information\n\nThe DE maintain a list of common questions in the FAQs\nThe DE also provide detailed guidance on licensing and recommended practices."
+    "text": "Further Information\n\nThe DE maintain a list of common questions in the FAQs.\nThe DE also provide detailed guidance on licensing and recommended practices."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Review of Financial Studies",
+    "section": "Contact",
+    "text": "Contact\nIf you have any questions about the CDSP of the RFS and the above review process, please reach out to dataeditor@sfs.org."
   }
 ]

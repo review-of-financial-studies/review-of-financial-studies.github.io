@@ -21,3 +21,4 @@ format:
       - cosmo
     css: styles.css
     toc: true
+    email-obfuscation: javascript
