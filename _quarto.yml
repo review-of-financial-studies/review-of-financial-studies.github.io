@@ -10,7 +10,10 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - license.qmd
+      - text: "FAQs"
+        href: faqs.qmd
+      - text: "License"
+        href: license.qmd
 
 format:
   html:

@@ -3,4 +3,7 @@ title: "Review of Financial Studies"
 subtitle: "Data Editor Website"
 ---
 
-Coming soon ...
+This website provides relevant information regarding the Data and Code Sharing Policy and pre-acceptance reproducibility checks implemented at the RFS.
+
+## Process
+

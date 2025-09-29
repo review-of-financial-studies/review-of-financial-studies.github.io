@@ -21,10 +21,24 @@
     "text": "Resources\nFor further information, including options for multi-license setups, we refer to the guidance provided by the Social Science Data Editors."
   },
   {
+    "objectID": "faqs.html",
+    "href": "faqs.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon …"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Review of Financial Studies",
     "section": "",
-    "text": "Coming soon …"
+    "text": "This website provides relevant information regarding the Data and Code Sharing Policy and pre-acceptance reproducibility checks implemented at the RFS."
+  },
+  {
+    "objectID": "index.html#process",
+    "href": "index.html#process",
+    "title": "Review of Financial Studies",
+    "section": "Process",
+    "text": "Process"
   }
 ]
