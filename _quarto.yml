@@ -3,12 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: "Review of Financial Studies"
+  title: "RFS Data Editors"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "FAQs"
+        href: faqs.qmd
+      - text: "License"
+        href: license.qmd
 
 format:
   html:
     theme:
       - cosmo
-      - brand
     css: styles.css
     toc: true
+    email-obfuscation: javascript
