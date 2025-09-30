@@ -475,4 +475,4 @@ Creative Commons may be contacted at creativecommons.org.
 
 ## Resources
 
-For further information, including options for multi-license setups, we refer to the guidance provided by the Social Science Data Editors.
+For further information, including options for multi-license setups, we refer to the guidance provided by the [Social Science Data Editors](https://social-science-data-editors.github.io/).
