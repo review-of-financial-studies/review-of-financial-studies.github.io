@@ -3,7 +3,7 @@ title: "Review of Financial Studies"
 subtitle: "Data Editor Website"
 ---
 
-This website provides key information about the **Data and Code Sharing Policy** (CDSP) and the pre-acceptance reproducibility checks implemented at the *Review of Financial Studies* (RFS).
+This website provides key information about the [**Data and Code Sharing Policy**](https://sfs.org/review-of-financial-studies/code-sharing-policy/) (CDSP) and the pre-acceptance reproducibility checks implemented at the *Review of Financial Studies* (RFS).
 
 ## Process
 
