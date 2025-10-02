@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,8 +115,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#before-submission" id="toc-before-submission" class="nav-link active" data-scroll-target="#before-submission">Before submission</a></li>
+  <li><a href="#during-the-verification" id="toc-during-the-verification" class="nav-link" data-scroll-target="#during-the-verification">During the verification</a></li>
+  <li><a href="#after-publication" id="toc-after-publication" class="nav-link" data-scroll-target="#after-publication">After publication</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -140,10 +148,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>If you have any questions about the <strong>Data and Code Sharing Policy</strong> (CDSP) of the <em>Review of Financial Studies</em> (RFS) and its review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.</p>
-<p>Coming soon …</p>
+<p>If you have any questions about the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/"><strong>Code and Data Sharing Policy</strong></a> (CDSP) of the <em>Review of Financial Studies</em> (RFS) and its review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.</p>
+<section id="before-submission" class="level3">
+<h3 class="anchored" data-anchor-id="before-submission">Before submission</h3>
+<details>
+<summary>
+<strong>When does the updated CDSP apply to my submission?</strong>
+</summary>
+<p>This policy applies to all submissions <strong>conditionally accepted on or after October 1, 2025</strong>. If your paper was conditionally accepted before this date, the policy does not apply. Papers that are not conditionally accepted do not have to provide replication packages.</p>
+</details>
+<details>
+<summary>
+<strong>I want to request an exemption from the CDSP. What should I do?</strong>
+</summary>
+<p>While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption <strong>at the initial submission</strong>. As detailed in the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>, the requst has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.</p>
+</details>
+<details>
+<summary>
+<strong>Do I have to ask for exemptions from sharing licensed data (e.g., CRSP or Compustat)?</strong>
+</summary>
+<p>No.&nbsp;You should not request exemptions for licensed, non-public data. This data will not be included in the replication package.</p>
+</details>
+</section>
+<section id="during-the-verification" class="level3">
+<h3 class="anchored" data-anchor-id="during-the-verification">During the verification</h3>
+<details>
+<summary>
+<strong>My paper was conditionally accepted but the editor requested further changes. Which version of the paper should be reproduced by the replication package?</strong>
+</summary>
+The replication package should reproduce the paper’s results that will eventually be published. Hence, the package should reflect the version you will resubmit.
+</details>
+<details>
+<summary>
+<strong>What should I do, if I cannot meet the deadline for submitting my replication package?</strong>
+</summary>
+Reach out to the data editors as soon as possible and explain the reasons for the delay. While the journal aims for a quick turnaround, there are valid reasons to extend the deadline.
+</details>
+<details>
+<summary>
+<strong>Who verifies that my code actually works? , and what happens if there are technical issues?</strong>
+</summary>
+<p>The data editors verify your replication package. They will:</p>
+<ul>
+<li>Check that your description of computational steps matches the submitted materials</li>
+<li>Run your code in a dedicated virtual computing environment</li>
+<li>Verify that your materials reproduce the paper’s key tables and figures</li>
+</ul>
+You will work collaboratively with the Data Editors during this process.
+</details>
+<details>
+<summary>
+<strong>What happens if there are technical issues in reproducing my results?</strong>
+</summary>
+If technical issues arise, the data editors will contact you directly. This communication is confidential. Then, you will be asked to fix the issues before the data editors write their final report for the editor handling your submission. The data editors will publish their report confirming successful reproduction alongside your package.
+</details>
+</section>
+<section id="after-publication" class="level3">
+<h3 class="anchored" data-anchor-id="after-publication">After publication</h3>
+<details>
+<summary>
+<strong>Am I expected to provide technical support to other researchers who use my replication package after publication?</strong>
+</summary>
+<p><em>No.&nbsp;The policy explicitly states that </em>”Authors are not expected to provide assistance or ongoing support to users of the Package”*. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities.</p>
+</details>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

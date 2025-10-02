@@ -52,4 +52,4 @@ flowchart LR
 
 If you have any questions about the CDSP of the RFS and the above review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>. If you have submitted your paper, please add the assigned manuscript ID to your communication.
 
-Currently, [Christoph Scheuch](https://www.linkedin.com/in/christophscheuch/) and [Patrick Weiss](https://sites.google.com/view/patrick-weiss) act as DE for the RFS.
+Currently, [Christoph Scheuch](https://www.linkedin.com/in/christophscheuch/) and [Patrick Weiss](https://sites.google.com/view/patrick-weiss) act as data editors for the RFS.
