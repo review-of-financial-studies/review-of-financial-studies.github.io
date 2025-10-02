@@ -4,7 +4,7 @@
     "href": "license.html",
     "title": "Standard License",
     "section": "",
-    "text": "Disclaimer\n\n\n\nThis site does not provide legal advice. The information below is offered for discussion purposes and as general guidance only. Authors should consult with a qualified party—such as university counsel or a lawyer—before selecting and applying a license.\nWe strongly encourage authors to adopt dual-use licenses that separately govern permissions for code and for data. This approach ensures clarity in how materials may be reused, adapted, and shared.\nFor code, scripts, programs, and software:\nFor data, databases, images, tables, text, and other non-code materials:\nBy applying appropriate licenses to both code and data, authors facilitate transparency, reproducibility, and responsible reuse, while retaining the ability to set clear boundaries on how their work may be employed."
+    "text": "NoteDisclaimer\n\n\n\nThis site does not provide legal advice. The information below is offered for discussion purposes and as general guidance only. Authors should consult with a qualified party—such as university counsel or a lawyer—before selecting and applying a license.\nWe strongly encourage authors to adopt dual-use licenses that separately govern permissions for code and for data. This approach ensures clarity in how materials may be reused, adapted, and shared.\nFor code, scripts, programs, and software:\nFor data, databases, images, tables, text, and other non-code materials:\nBy applying appropriate licenses to both code and data, authors facilitate transparency, reproducibility, and responsible reuse, while retaining the ability to set clear boundaries on how their work may be employed."
   },
   {
     "objectID": "license.html#example-license",
@@ -53,6 +53,6 @@
     "href": "index.html#contact",
     "title": "Review of Financial Studies",
     "section": "Contact",
-    "text": "Contact\nIf you have any questions about the CDSP of the RFS and the above review process, please reach out to dataeditor@sfs.org. If you have submitted your paper, please add the assigned manuscript ID to your communication.\nCurrently, Christoph Scheuch and Patrick Weiss act as DE for the RFS."
+    "text": "Contact\nIf you have any questions about the CDSP of the RFS and the above review process, please reach out to dataeditor@sfs.org. If you have submitted your paper, please add the assigned manuscript ID to your communication.\nCurrently, Christoph Scheuch and Patrick Weiss act as data editors for the RFS."
   }
 ]
