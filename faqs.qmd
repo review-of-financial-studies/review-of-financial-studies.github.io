@@ -42,7 +42,7 @@ Reach out to the data editors as soon as possible and explain the reasons for th
 </details>
 
 <details>
-<summary><strong>Who verifies that my code actually works? , and what happens if there are technical issues?</strong></summary>
+<summary><strong>Who verifies that my code actually works and what happens if there are technical issues?</strong></summary>
 
 The data editors verify your replication package. They will:
 
@@ -50,7 +50,7 @@ The data editors verify your replication package. They will:
 - Run your code in a dedicated virtual computing environment
 - Verify that your materials reproduce the paper's key tables and figures
 
-You will work collaboratively with the Data Editors during this process. 
+You will work collaboratively with the data editors during this process. 
 </details>
 
 <details>
@@ -65,6 +65,6 @@ If technical issues arise, the data editors will contact you directly. This comm
 <details>
 <summary><strong>Am I expected to provide technical support to other researchers who use my replication package after publication?</strong></summary>
 
-*No. The policy explicitly states that *"Authors are not expected to provide assistance or ongoing support to users of the Package"*. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities.
+No. The policy explicitly states that *"Authors are not expected to provide assistance or ongoing support to users of the Package"*. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities.
 
 </details>
