@@ -2,6 +2,19 @@
 title: "Frequently Asked Questions"
 ---
 
+<style>
+summary {
+  font-weight: normal;
+  color: #000000 !important;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+summary:hover {
+  color: #0066cc;
+}
+</style>
+
 If you have any questions about the [**Code and Data Sharing Policy**](https://sfs.org/review-of-financial-studies/code-sharing-policy/) (CDSP) of the *Review of Financial Studies* (RFS) and its review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.
 
 ### Before submission
