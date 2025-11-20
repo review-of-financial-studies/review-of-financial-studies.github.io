@@ -29,7 +29,7 @@ This policy applies to all submissions **conditionally accepted on or after Octo
 <details>
 <summary>I want to request an **exemption** from the CDSP. What should I do?</summary>
 
-While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption **at the initial submission**. As detailed in the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/), the requst has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.
+While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption **at the initial submission**. As detailed in the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/), the request has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.
 
 </details>
 
@@ -43,7 +43,7 @@ No. You should not request exemptions for licensed, non-public data. This data w
 ### During the verification
 
 <details>
-<summary>My paper was conditionally accepted but the editor requested **further changes**. Which version of the paper should be reproduced by the replication package?</summary>
+<summary>My paper was conditionally accepted, but the editor requested **further changes**. Which version of the paper should be reproduced using the replication package?</summary>
 
 The replication package should reproduce the paper's results that will eventually be published. Hence, the package should reflect the version you will resubmit. 
 </details>
@@ -73,6 +73,7 @@ The data editors verify your replication package. They will:
 - Check that your description of computational steps matches the submitted materials
 - Run your code in a dedicated virtual computing environment
 - Verify that your materials reproduce the paper's key tables and figures
+- Submit a report to the editor, who will decide on final acceptance 
 
 You will work collaboratively with the data editors during this process. 
 </details>
