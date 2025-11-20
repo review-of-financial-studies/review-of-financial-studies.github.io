@@ -36,6 +36,17 @@ The replication package should reproduce the paper's results that will eventuall
 </details>
 
 <details>
+<summary><strong>My paper has been conditionally accepted, should I just submit the replication package to the data editors or do I have to resubmit to the editor as well?</strong></summary>
+
+The answer to this question depends: 
+
+(1) If the editor made further revision requests in their decision letter, you have to resubmit to the editor. Additionally, you have to submit your replication package to the data editors.
+(2) If the editor did not make further requests, you only have to submit the replication package to the data editors. 
+
+In the end, the editor makes the final acceptance decision.
+</details>
+
+<details>
 <summary><strong>What should I do, if I cannot meet the deadline for submitting my replication package?</strong></summary>
 
 Reach out to the data editors as soon as possible and explain the reasons for the delay. While the journal aims for a quick turnaround, there are valid reasons to extend the deadline.
