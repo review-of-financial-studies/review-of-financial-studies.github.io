@@ -20,21 +20,21 @@ If you have any questions about the [**Code and Data Sharing Policy**](https://s
 ### Before submission
 
 <details>
-<summary><strong>When does the updated CDSP apply to my submission?</strong></summary>
+<summary>When does the updated CDSP apply to my submission?</summary>
 
 This policy applies to all submissions **conditionally accepted on or after October 1, 2025**. If your paper was conditionally accepted before this date, the policy does not apply. Papers that are not conditionally accepted do not have to provide replication packages.
 
 </details>
 
 <details>
-<summary><strong>I want to request an exemption from the CDSP. What should I do?</strong></summary>
+<summary>I want to request an **exemption** from the CDSP. What should I do?</summary>
 
 While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption **at the initial submission**. As detailed in the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/), the requst has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.
 
 </details>
 
 <details>
-<summary><strong>Do I have to ask for exemptions from sharing licensed data (e.g., CRSP or Compustat)?</strong></summary>
+<summary>Do I have to ask for **exemptions** from sharing **licensed data** (e.g., CRSP or Compustat)?</summary>
 
 No. You should not request exemptions for licensed, non-public data. This data will not be included in the replication package.
 
@@ -43,13 +43,13 @@ No. You should not request exemptions for licensed, non-public data. This data w
 ### During the verification
 
 <details>
-<summary><strong>My paper was conditionally accepted but the editor requested further changes. Which version of the paper should be reproduced by the replication package?</strong></summary>
+<summary>My paper was conditionally accepted but the editor requested **further changes**. Which version of the paper should be reproduced by the replication package?</summary>
 
 The replication package should reproduce the paper's results that will eventually be published. Hence, the package should reflect the version you will resubmit. 
 </details>
 
 <details>
-<summary><strong>My paper has been conditionally accepted, should I just submit the replication package to the data editors or do I have to resubmit to the editor as well?</strong></summary>
+<summary>My paper has been conditionally accepted, should I just submit the replication package to the data editors or do I have to resubmit to the editor as well?</summary>
 
 The answer to this question depends: 
 
@@ -60,13 +60,13 @@ In the end, the editor makes the final acceptance decision.
 </details>
 
 <details>
-<summary><strong>What should I do, if I cannot meet the deadline for submitting my replication package?</strong></summary>
+<summary>What should I do, if I cannot meet the **deadline** for submitting my replication package?</summary>
 
 Reach out to the data editors as soon as possible and explain the reasons for the delay. While the journal aims for a quick turnaround, there are valid reasons to extend the deadline.
 </details>
 
 <details>
-<summary><strong>Who verifies that my code actually works and what happens if there are technical issues?</strong></summary>
+<summary>Who verifies that my code actually works?</summary>
 
 The data editors verify your replication package. They will:
 
@@ -78,13 +78,13 @@ You will work collaboratively with the data editors during this process.
 </details>
 
 <details>
-<summary><strong>What happens if there are technical issues in reproducing my results?</strong></summary>
+<summary>What happens if there are **technical issues** in reproducing my results?</summary>
 
 If technical issues arise, the data editors will contact you directly in a confidential manner. You will be asked to correct the issues before the data editors prepare their final report for the handling editor.
 </details>
 
 <details>
-<summary><strong>What if the replication package produces different results than those reported in my paper?</strong></summary>
+<summary>What if the replication package produces **different results** than those reported in my paper?</summary>
 
  If the replication package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original editorial decision. 
 </details>
@@ -93,7 +93,7 @@ If technical issues arise, the data editors will contact you directly in a confi
 ### After publication
 
 <details>
-<summary><strong>Am I expected to provide technical support to other researchers who use my replication package after publication?</strong></summary>
+<summary>Am I expected to provide technical support to other researchers who use my replication package after publication?</summary>
 
 No. The policy explicitly states that *"Authors are not expected to provide assistance or ongoing support to users of the Package"*. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities.
 
