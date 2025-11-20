@@ -17,7 +17,7 @@ summary:hover {
 
 If you have any questions about the [**Code and Data Sharing Policy**](https://sfs.org/review-of-financial-studies/code-sharing-policy/) (CDSP) of the *Review of Financial Studies* (RFS) and its review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.
 
-### Before submission
+### Before paper submission
 
 <details>
 <summary>When does the updated CDSP apply to my submission?</summary>
@@ -40,13 +40,21 @@ No. You should not request exemptions for licensed, non-public data. This data w
 
 </details>
 
-### During the verification
+### Details regarding the package
 
 <details>
 <summary>My paper was conditionally accepted, but the editor requested **further changes**. Which version of the paper should be reproduced using the replication package?</summary>
 
 The replication package should reproduce the paper's results that will eventually be published. Hence, the package should reflect the version you will resubmit. 
 </details>
+
+<details>
+<summary><strong>Should I upload **proprietary data** to the RFS dataverse?</strong></summary>
+
+No. You should *not* add proprietary data to the RFS dataverse when submitting your package to the data editors. Any material uploaded to the RFS dataverse could be published after the replication package is accepted.
+</details>
+
+### During the verification
 
 <details>
 <summary>My paper has been conditionally accepted, should I just submit the replication package to the data editors or do I have to resubmit to the editor as well?</summary>
@@ -57,12 +65,6 @@ The answer to this question depends:
 (2) If the editor did not make further requests, you only have to submit the replication package to the data editors. 
 
 In the end, the editor makes the final acceptance decision.
-</details>
-
-<details>
-<summary><strong>Should I upload **proprietary data** to the RFS dataverse?</strong></summary>
-
-No. You should *not* add proprietary data to the RFS dataverse when submitting your package to the data editors. Any material uploaded to the RFS dataverse could be published after the replication package is accepted.
 </details>
 
 <details>
