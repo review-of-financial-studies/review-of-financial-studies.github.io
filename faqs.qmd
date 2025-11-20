@@ -60,6 +60,12 @@ In the end, the editor makes the final acceptance decision.
 </details>
 
 <details>
+<summary><strong>Should I upload **proprietary data** to the RFS dataverse?</strong></summary>
+
+No. You should *not* add proprietary data to the RFS dataverse when submitting your package to the data editors. Any material uploaded to the RFS dataverse could be published after the replication package is accepted.
+</details>
+
+<details>
 <summary>What should I do, if I cannot meet the **deadline** for submitting my replication package?</summary>
 
 Reach out to the data editors as soon as possible and explain the reasons for the delay. While the journal aims for a quick turnaround, there are valid reasons to extend the deadline.
