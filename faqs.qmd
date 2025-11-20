@@ -40,7 +40,7 @@ No. You should not request exemptions for licensed, non-public data. This data w
 
 </details>
 
-### Details regarding the package
+### Regarding the package
 
 <details>
 <summary>My paper was conditionally accepted, but the editor requested **further changes**. Which version of the paper should be reproduced using the replication package?</summary>
@@ -49,9 +49,27 @@ The replication package should reproduce the paper's results that will eventuall
 </details>
 
 <details>
-<summary><strong>Should I upload **proprietary data** to the RFS dataverse?</strong></summary>
+<summary>Should I upload **proprietary data** to the RFS dataverse?</summary>
 
 No. You should *not* add proprietary data to the RFS dataverse when submitting your package to the data editors. Any material uploaded to the RFS dataverse could be published after the replication package is accepted.
+</details>
+
+<details>
+<summary>I have prepared a README that does not conform to the template [README](https://social-science-data-editors.github.io/template_README/). Is this ok?</summary>
+
+The idea of the template for the [README](https://social-science-data-editors.github.io/template_README/) is a standardization of the process across journals, which aims at improving the author experience. Hence, the data editors will ask you for an update until you conform to the standards.
+</details>
+
+<details>
+<summary>Why does the RFS Dataverse default to the **CC0 license**?</summary>
+
+We cannot change the default. However, we provide some alternative suggestions on our [License page](license.qmd). You can update the license later on.
+</details>
+
+<details>
+<summary>If I submit to the RFS Dataverse, does my material become immediately **public**?</summary>
+
+No. The data editors have to publish all replication packages. During the verification proces, you can update the package. Then, the final version will be published after it is approved by the data editors.
 </details>
 
 ### During the verification
