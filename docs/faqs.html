@@ -120,7 +120,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#before-submission" id="toc-before-submission" class="nav-link active" data-scroll-target="#before-submission">Before submission</a></li>
+  <li><a href="#before-paper-submission" id="toc-before-paper-submission" class="nav-link active" data-scroll-target="#before-paper-submission">Before paper submission</a></li>
+  <li><a href="#regarding-the-package" id="toc-regarding-the-package" class="nav-link" data-scroll-target="#regarding-the-package">Regarding the package</a></li>
   <li><a href="#during-the-verification" id="toc-during-the-verification" class="nav-link" data-scroll-target="#during-the-verification">During the verification</a></li>
   <li><a href="#after-publication" id="toc-after-publication" class="nav-link" data-scroll-target="#after-publication">After publication</a></li>
   </ul>
@@ -161,8 +162,8 @@ summary:hover {
 }
 </style>
 <p>If you have any questions about the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/"><strong>Code and Data Sharing Policy</strong></a> (CDSP) of the <em>Review of Financial Studies</em> (RFS) and its review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.</p>
-<section id="before-submission" class="level3">
-<h3 class="anchored" data-anchor-id="before-submission">Before submission</h3>
+<section id="before-paper-submission" class="level3">
+<h3 class="anchored" data-anchor-id="before-paper-submission">Before paper submission</h3>
 <details>
 <summary>
 When does the updated CDSP apply to my submission?
@@ -173,7 +174,7 @@ When does the updated CDSP apply to my submission?
 <summary>
 I want to request an <strong>exemption</strong> from the CDSP. What should I do?
 </summary>
-<p>While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption <strong>at the initial submission</strong>. As detailed in the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>, the requst has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.</p>
+<p>While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption <strong>at the initial submission</strong>. As detailed in the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>, the request has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.</p>
 </details>
 <details>
 <summary>
@@ -182,14 +183,41 @@ Do I have to ask for <strong>exemptions</strong> from sharing <strong>licensed d
 <p>No.&nbsp;You should not request exemptions for licensed, non-public data. This data will not be included in the replication package.</p>
 </details>
 </section>
-<section id="during-the-verification" class="level3">
-<h3 class="anchored" data-anchor-id="during-the-verification">During the verification</h3>
+<section id="regarding-the-package" class="level3">
+<h3 class="anchored" data-anchor-id="regarding-the-package">Regarding the package</h3>
 <details>
 <summary>
-My paper was conditionally accepted but the editor requested <strong>further changes</strong>. Which version of the paper should be reproduced by the replication package?
+My paper was conditionally accepted, but the editor requested <strong>further changes</strong>. Which version of the paper should be reproduced using the replication package?
 </summary>
 The replication package should reproduce the paper’s results that will eventually be published. Hence, the package should reflect the version you will resubmit.
 </details>
+<details>
+<summary>
+Should I upload <strong>proprietary data</strong> to the RFS dataverse?
+</summary>
+No.&nbsp;You should <em>not</em> add proprietary data to the RFS dataverse when submitting your package to the data editors. Any material uploaded to the RFS dataverse could be published after the replication package is accepted.
+</details>
+<details>
+<summary>
+Can I also add a README that does not conform to the template <a href="https://social-science-data-editors.github.io/template_README/">README</a>?
+</summary>
+The idea of the template for the <a href="https://social-science-data-editors.github.io/template_README/">README</a> is a standardization of the process across journals, which aims at improving the author experience. Hence, the data editors will ask you for an update until you conform to the standards.
+</details>
+<details>
+<summary>
+Why does the RFS Dataverse default to the <strong>CC0 license</strong>?
+</summary>
+We cannot change the default. However, we provide some alternative suggestions on our <a href="./license.html">License page</a>. You can update the license later on.
+</details>
+<details>
+<summary>
+If I submit to the RFS Dataverse, does my material become immediately <strong>public</strong>?
+</summary>
+No.&nbsp;The data editors have to publish all replication packages. During the verification process, you can update the package. Then, the final version will be published after it is approved by the data editors.
+</details>
+</section>
+<section id="during-the-verification" class="level3">
+<h3 class="anchored" data-anchor-id="during-the-verification">During the verification</h3>
 <details>
 <summary>
 My paper has been conditionally accepted, should I just submit the replication package to the data editors or do I have to resubmit to the editor as well?
@@ -216,6 +244,7 @@ Who verifies that my code actually works?
 <li>Check that your description of computational steps matches the submitted materials</li>
 <li>Run your code in a dedicated virtual computing environment</li>
 <li>Verify that your materials reproduce the paper’s key tables and figures</li>
+<li>Submit a report to the editor, who will decide on final acceptance</li>
 </ul>
 You will work collaboratively with the data editors during this process.
 </details>
