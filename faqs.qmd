@@ -113,15 +113,15 @@ If technical issues arise, the data editors will contact you directly in a confi
 <details>
 <summary>What if the replication package produces **different results** than those reported in my paper?</summary>
 
- If the replication package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original editorial decision. 
+If the replication package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original editorial decision. 
 </details>
 
 
 ### After publication
 
 <details>
-<summary>Am I expected to provide technical support to other researchers who use my replication package after publication?</summary>
+<summary>Am I expected to provide **technical support** to other researchers who use my replication package after publication?</summary>
 
-No. The policy explicitly states that *"Authors are not expected to provide assistance or ongoing support to users of the Package"*. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities.
+No. The policy explicitly states that *"Authors are not expected to provide assistance or ongoing support to users of the Package"*. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities. Moreover, licenses such as [MIT or Modified BSD](license.qmd) further clarify that the code is provided *as is*.
 
 </details>
