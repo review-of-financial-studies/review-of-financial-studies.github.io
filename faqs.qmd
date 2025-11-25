@@ -72,6 +72,13 @@ We cannot change the default. However, we provide some alternative suggestions o
 No. The data editors have to publish all replication packages. During the verification process, you can update the package. Then, the final version will be published after it is approved by the data editors.
 </details>
 
+<details>
+<summary>
+Can I include the **manuscript** of my submission in the replication package?
+</summary>
+No. Authors should not include the full text of their paper in the replication package. Replication packages are typically distributed under an open-source or highly permissive license (e.g., MIT, Modified BDS), which often conflicts with the copyright and licensing terms required by the publisher.
+</details>
+
 ### During the verification
 
 <details>
