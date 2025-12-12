@@ -48,14 +48,11 @@ flowchart LR
 - **Certification**: If the replication package successfully reproduces the key tables and figures from the submission, the DE will notify the handling editor of successful certification. If, however, the package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original decision.
 - **Accept**: Upon final acceptance, authors must update and publish their replication package in the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). The DE will then host the verified code and accompanying report in a public GitHub repository under the [RFS organization](https://github.com/review-of-financial-studies).
 
-### Common Pitfalls 
+### Common Issues 
 
-Most common pitfalls can be avoided by ensuring that:
+Experience from prior reviews indicates that a limited set of recurring issues accounts for most delays during the data-editing and replication review process. Many of these delays can be avoided by ensuring that the replication package includes a [README](https://social-science-data-editors.github.io/template_README/) that follows the Social Science Data Editors template (version 1.1) for standardized documentation, as well as a [LICENSE file](license.qmd) that clearly specifies the terms governing the use of the code and data.
 
-- The replication package includes a [README](https://social-science-data-editors.github.io/template_README/) that follows the Social Science Data Editors template (version 1.1) for standardized documentation.
-- A [LICENSE file](license.qmd) is included and clearly specifies the terms governing the use of the code and data.
-
-In addition, the following topics frequently arise during the review process:
+Beyond these general requirements, the topics summarized below frequently arise during review and should ideally be addressed prior to submission:
 
 | Topic | Stata | Python | R |
 |------|-------|--------|---|
