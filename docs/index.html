@@ -123,7 +123,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#process" id="toc-process" class="nav-link active" data-scroll-target="#process">Process</a></li>
+  <li><a href="#process" id="toc-process" class="nav-link active" data-scroll-target="#process">Process</a>
+  <ul class="collapse">
+  <li><a href="#common-pitfalls" id="toc-common-pitfalls" class="nav-link" data-scroll-target="#common-pitfalls">Common Pitfalls</a></li>
+  </ul></li>
   <li><a href="#further-information" id="toc-further-information" class="nav-link" data-scroll-target="#further-information">Further Information</a></li>
   <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
   </ul>
@@ -195,10 +198,62 @@ flowchart LR
 <ul>
 <li><strong>Submission</strong>: Please read the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>. Any requests for exemption from the CDSP must be made at the time of initial submission.</li>
 <li><strong>Onboarding</strong>: All conditionally accepted manuscripts enter the data editing process. At this point, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified. For common issues that arise during onboarding, please consult the <a href="./faqs.html">FAQs</a>.</li>
-<li><strong>Review</strong>: Authors must prepare a replication package in compliance with the CDSP and submit it via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The package remains private during the review phase. Based on the <a href="https://social-science-data-editors.github.io/template_README/">README</a> instructions, the DE will configure a secure, dedicated virtual environment provided by the RFS. Then, authors must supply all necessary data to this environment. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors.</li>
+<li><strong>Review</strong>: Authors must prepare a replication package that complies with the CDSP and submit it via the RFS Dataverse￼. The package should be prepared for eventual public release (e.g., using pseudo or synthetic data, instructions for replicators), but will remain private during the review phase. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
+<ol type="1">
+<li>The DE configures a secure, dedicated virtual environment provided by the RFS, based on the instructions in the <a href="https://social-science-data-editors.github.io/template_README/">README</a>.</li>
+<li>The DE verifies that the code executes successfully in this environment using the materials initially provided.</li>
+<li>Once the code runs successfully, authors supply all required original data to the environment.</li>
+<li>The DE verifies that the outputs reproduce the results reported in the submission.</li>
+<li>After verification is complete, the DE permanently and irrevocably deletes the virtual environment.</li>
+</ol></li>
 <li><strong>Certification</strong>: If the replication package successfully reproduces the key tables and figures from the submission, the DE will notify the handling editor of successful certification. If, however, the package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original decision.</li>
 <li><strong>Accept</strong>: Upon final acceptance, authors must update and publish their replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The DE will then host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
 </ul>
+<section id="common-pitfalls" class="level3">
+<h3 class="anchored" data-anchor-id="common-pitfalls">Common Pitfalls</h3>
+<p>Most common pitfalls can be avoided by ensuring that:</p>
+<ul>
+<li>The replication package includes a <a href="https://social-science-data-editors.github.io/template_README/">README</a> that follows the Social Science Data Editors template (version 1.1) for standardized documentation.</li>
+<li>A <a href="./license.html">LICENSE file</a> is included and clearly specifies the terms governing the use of the code and data.</li>
+</ul>
+<p>In addition, the following topics frequently arise during the review process:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Topic</th>
+<th>Stata</th>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Project execution</strong></td>
+<td>Do not use <code>cd</code> to change directories within scripts. Launch Stata from the project root (e.g., open <code>main.do</code> in the root or use a Stata project file).</td>
+<td>Do not use <code>os.chdir()</code>. Run code from the project root (e.g., <code>uv run python main.py</code> or <code>runpy.run_path()</code>), with all paths relative to the root.</td>
+<td>Do not use <code>setwd()</code>. Run R from the project root (e.g., open the folder directly in RStudio, Positron, or VS Code).</td>
+</tr>
+<tr class="even">
+<td><strong>File paths &amp; portability</strong></td>
+<td>Use relative paths with forward slashes (<code>/</code>). Avoid backslashes (<code>\</code>), which are Windows-specific.</td>
+<td>Use relative paths with forward slashes (<code>/</code>) or <code>pathlib.Path</code>. Avoid hard-coded absolute paths.</td>
+<td>Use relative paths with forward slashes (<code>/</code>). Do not rely on escaped backslashes (<code>\\</code>).</td>
+</tr>
+<tr class="odd">
+<td><strong>Dependency management</strong></td>
+<td>Document the Stata environment and required packages in <code>setup.do</code> (<code>ado</code>-path included).</td>
+<td>Use reproducible, cross-platform lockfiles (e.g., <code>uv</code>) rather than <code>pip freeze</code>-based <code>requirements.txt</code>.</td>
+<td>Use <code>renv.lock</code> to document and restore the R environment.</td>
+</tr>
+<tr class="even">
+<td><strong>Examples</strong></td>
+<td><a href="https://github.com/review-of-financial-studies/template-stata">Stata project template</a></td>
+<td><a href="https://github.com/review-of-financial-studies/template-python">Python project template</a></td>
+<td><a href="https://github.com/review-of-financial-studies/template-r">R project template</a></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="further-information" class="level2">
 <h2 class="anchored" data-anchor-id="further-information">Further Information</h2>
