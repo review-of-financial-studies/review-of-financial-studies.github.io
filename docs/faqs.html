@@ -120,9 +120,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#before-paper-submission" id="toc-before-paper-submission" class="nav-link active" data-scroll-target="#before-paper-submission">Before paper submission</a></li>
-  <li><a href="#regarding-the-package" id="toc-regarding-the-package" class="nav-link" data-scroll-target="#regarding-the-package">Regarding the package</a></li>
-  <li><a href="#during-the-verification" id="toc-during-the-verification" class="nav-link" data-scroll-target="#during-the-verification">During the verification</a></li>
+  <li><a href="#before-manuscript-submission" id="toc-before-manuscript-submission" class="nav-link active" data-scroll-target="#before-manuscript-submission">Before manuscript submission</a></li>
+  <li><a href="#regarding-the-replication-package" id="toc-regarding-the-replication-package" class="nav-link" data-scroll-target="#regarding-the-replication-package">Regarding the replication package</a></li>
+  <li><a href="#during-verification" id="toc-during-verification" class="nav-link" data-scroll-target="#during-verification">During verification</a></li>
   <li><a href="#after-publication" id="toc-after-publication" class="nav-link" data-scroll-target="#after-publication">After publication</a></li>
   </ul>
 </nav>
@@ -162,118 +162,147 @@ summary:hover {
 }
 </style>
 <p>If you have any questions about the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/"><strong>Code and Data Sharing Policy</strong></a> (CDSP) of the <em>Review of Financial Studies</em> (RFS) and its review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.</p>
-<section id="before-paper-submission" class="level3">
-<h3 class="anchored" data-anchor-id="before-paper-submission">Before paper submission</h3>
+<section id="before-manuscript-submission" class="level3">
+<h3 class="anchored" data-anchor-id="before-manuscript-submission">Before manuscript submission</h3>
 <details>
 <summary>
 When does the updated CDSP apply to my submission?
 </summary>
-<p>This policy applies to all submissions <strong>conditionally accepted on or after October 1, 2025</strong>. If your paper was conditionally accepted before this date, the policy does not apply. Papers that are not conditionally accepted do not have to provide replication packages.</p>
+<p>The updated CDSP applies to all submissions <strong>conditionally accepted on or after October&nbsp;1, 2025</strong>. If your submission was conditionally accepted before this date, the policy does not apply. Submissions that are not conditionally accepted are <strong>not required</strong> to provide a replication package.</p>
 </details>
 <details>
 <summary>
 I want to request an <strong>exemption</strong> from the CDSP. What should I do?
 </summary>
-<p>While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption <strong>at the initial submission</strong>. As detailed in the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>, the request has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.</p>
+<p>Although authors are encouraged to apply appropriate licenses to limit reuse of their code and/or data, the CDSP allows for exemptions. Requests for full or partial exemptions must be made <strong>at the time of initial submission</strong>.</p>
+<p>As outlined in the <em>Guidelines for Submission</em>, exemption requests must clearly state:</p>
+<ul>
+<li>Which portions of the code and/or data you wish to withhold<br>
+</li>
+<li>The proposed duration of withholding<br>
+</li>
+<li>The justification for the request</li>
+</ul>
+<p>The handling editor makes the final determination.</p>
 </details>
 <details>
 <summary>
-Do I have to ask for <strong>exemptions</strong> from sharing <strong>licensed data</strong> (e.g., CRSP or Compustat)?
+Do I need to request exemptions for <strong>licensed data</strong> (e.g., CRSP or Compustat)?
 </summary>
-<p>No.&nbsp;You should not request exemptions for licensed, non-public data. This data will not be included in the replication package.</p>
+<p>No.&nbsp;You should <strong>not</strong> request exemptions for licensed, non-public data. Such data should not be included in the replication package.</p>
 </details>
 </section>
-<section id="regarding-the-package" class="level3">
-<h3 class="anchored" data-anchor-id="regarding-the-package">Regarding the package</h3>
+<section id="regarding-the-replication-package" class="level3">
+<h3 class="anchored" data-anchor-id="regarding-the-replication-package">Regarding the replication package</h3>
 <details>
 <summary>
-My paper was conditionally accepted, but the editor requested <strong>further changes</strong>. Which version of the paper should be reproduced using the replication package?
+My manuscript was conditionally accepted, but the editor requested further changes. Which version should the replication package reproduce?
 </summary>
-The replication package should reproduce the paper’s results that will eventually be published. Hence, the package should reflect the version you will resubmit.
+<p>The replication package must reproduce the results of the version that will ultimately be published. Accordingly, the package should reflect the version you plan to resubmit.</p>
+<p>If your results have changed since the conditional acceptance, please provide the final manuscript version to the handling data editor when submitting your replication package.</p>
 </details>
 <details>
 <summary>
-Should I upload <strong>proprietary data</strong> to the RFS dataverse?
+Should I upload <strong>proprietary data</strong> to the RFS Dataverse?
 </summary>
-No.&nbsp;You should <em>not</em> add proprietary data to the RFS dataverse when submitting your package to the data editors. Any material uploaded to the RFS dataverse could be published after the replication package is accepted.
+<p>No.&nbsp;Proprietary data should <strong>not</strong> be uploaded to the RFS Dataverse.</p>
+<p>Your replication package should be prepared for eventual public release and may include:</p>
+<ul>
+<li>Pseudo or synthetic data<br>
+</li>
+<li>Detailed instructions enabling replication</li>
+</ul>
+<p>The data editor will guide you through the process of securely sharing proprietary data for verification purposes only.</p>
 </details>
 <details>
 <summary>
-Can I also add a README that does not conform to the template <a href="https://social-science-data-editors.github.io/template_README/">README</a>?
+My submission uses <strong>regulatory</strong> or <strong>on-premise data</strong>. What should I do?
 </summary>
-The idea of the template for the <a href="https://social-science-data-editors.github.io/template_README/">README</a> is a standardization of the process across journals, which aims at improving the author experience. Hence, the data editors will ask you for an update until you conform to the standards.
+<p>Clearly describe data availability in the README file and provide pseudo-data with the same structure as the original dataset.</p>
+</details>
+<details>
+<summary>
+May I include a README that does not conform to the template?
+</summary>
+<p>The standardized README template is intended to harmonize practices across journals and improve the author experience. Replication packages must conform to this standard, and data editors will request revisions until compliance is achieved.</p>
 </details>
 <details>
 <summary>
 Why does the RFS Dataverse default to the <strong>CC0 license</strong>?
 </summary>
-We cannot change the default. However, we provide some alternative suggestions on our <a href="./license.html">License page</a>. You can update the license later on.
+<p>The default license cannot be changed at the time of submission. However, alternative licensing options are discussed on the <a href="./license.html">License</a> page, and the data editor can assist you in updating the license on the RFS Dataverse after submission.</p>
 </details>
 <details>
 <summary>
 If I submit to the RFS Dataverse, does my material become immediately <strong>public</strong>?
 </summary>
-No.&nbsp;The data editors have to publish all replication packages. During the verification process, you can update the package. Then, the final version will be published after it is approved by the data editors.
+<p>No.&nbsp;Replication packages are published <strong>only after approval</strong> by the data editors.</p>
+<p>During verification, you may update your materials. The final, approved version will be made public once the process is complete.</p>
 </details>
 <details>
 <summary>
-Can I include the <strong>manuscript</strong> of my submission in the replication package?
+Can I include the <strong>manuscript</strong> in the replication package?
 </summary>
-No.&nbsp;Authors should not include the full text of their paper in the replication package. Replication packages are typically distributed under an open-source or highly permissive license (e.g., MIT, Modified BDS), which often conflicts with the copyright and licensing terms required by the publisher.
+<p>No.&nbsp;Authors should not include the full manuscript in the replication package.</p>
+<p>Replication materials are typically distributed under open or permissive licenses (e.g., MIT or Modified BSD), which may conflict with publisher copyright and licensing requirements.</p>
 </details>
 </section>
-<section id="during-the-verification" class="level3">
-<h3 class="anchored" data-anchor-id="during-the-verification">During the verification</h3>
+<section id="during-verification" class="level3">
+<h3 class="anchored" data-anchor-id="during-verification">During verification</h3>
 <details>
 <summary>
-My paper has been conditionally accepted, should I just submit the replication package to the data editors or do I have to resubmit to the editor as well?
+My submission was conditionally accepted. Do I need to resubmit to the editor as well as submit the replication package?
 </summary>
-<p>The answer to this question depends:</p>
+<p>This depends on the editor’s decision letter:</p>
 <ol type="1">
-<li>If the editor made further revision requests in their decision letter, you have to resubmit to the editor. Additionally, you have to submit your replication package to the data editors.</li>
-<li>If the editor did not make further requests, you only have to submit the replication package to the data editors.</li>
+<li>If further revisions were requested, you must <strong>resubmit the revised manuscript to the editor</strong> and <strong>submit the replication package to the data editors</strong>.</li>
+<li>If no further revisions were requested, you only need to <strong>submit the replication package to the data editors</strong>.</li>
 </ol>
-In the end, the editor makes the final acceptance decision.
+<p>The editor makes the final acceptance decision.</p>
 </details>
 <details>
 <summary>
-What should I do, if I cannot meet the <strong>deadline</strong> for submitting my replication package?
+What should I do if I cannot meet the <strong>replication package deadline</strong>?
 </summary>
-Reach out to the data editors as soon as possible and explain the reasons for the delay. While the journal aims for a quick turnaround, there are valid reasons to extend the deadline.
+<p>Contact the data editors as soon as possible and explain the reason for the delay. While the journal aims for a timely review process, reasonable deadline extensions may be granted.</p>
 </details>
 <details>
 <summary>
-Who verifies that my code actually works?
+Who verifies that my code runs correctly?
 </summary>
-<p>The data editors verify your replication package. They will:</p>
+<p>The data editors are responsible for verification. They will:</p>
 <ul>
-<li>Check that your description of computational steps matches the submitted materials</li>
-<li>Run your code in a dedicated virtual computing environment</li>
-<li>Verify that your materials reproduce the paper’s key tables and figures</li>
-<li>Submit a report to the editor, who will decide on final acceptance</li>
+<li>Review whether the documentation accurately describes the computational workflow<br>
+</li>
+<li>Execute the code in a dedicated virtual computing environment<br>
+</li>
+<li>Confirm that key tables and figures are reproduced<br>
+</li>
+<li>Submit a verification report to the handling editor</li>
 </ul>
-You will work collaboratively with the data editors during this process.
+<p>Authors work collaboratively with data editors throughout this process.</p>
 </details>
 <details>
 <summary>
-What happens if there are <strong>technical issues</strong> in reproducing my results?
+What happens if there are <strong>technical issues</strong> during verification?
 </summary>
-If technical issues arise, the data editors will contact you directly in a confidential manner. You will be asked to correct the issues before the data editors prepare their final report for the handling editor.
+<p>If technical issues arise, the data editors will contact you confidentially and request corrections before preparing their final report for the editor.</p>
 </details>
 <details>
 <summary>
-What if the replication package produces <strong>different results</strong> than those reported in my paper?
+What if the replication package produces <strong>different results</strong> than those reported in the manuscript?
 </summary>
-If the replication package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original editorial decision.
+<p>If discrepancies arise, authors may update the replication package and consult the handling editor. The editor will determine whether to proceed with or reconsider the original editorial decision.</p>
 </details>
 </section>
 <section id="after-publication" class="level3">
 <h3 class="anchored" data-anchor-id="after-publication">After publication</h3>
 <details>
 <summary>
-Am I expected to provide <strong>technical support</strong> to other researchers who use my replication package after publication?
+Am I expected to provide <strong>technical support</strong> to users of my replication package?
 </summary>
-<p>No.&nbsp;The policy explicitly states that <em>“Authors are not expected to provide assistance or ongoing support to users of the Package”</em>. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities. Moreover, licenses such as <a href="./license.html">MIT or Modified BSD</a> further clarify that the code is provided <em>as is</em>.</p>
+<p>No.&nbsp;The CDSP explicitly states that <em>“authors are not expected to provide assistance or ongoing support to users of the package.”</em></p>
+<p>Your responsibility is to supply a complete and well-documented replication package at the time of publication. <a href="./license.html">Permissive licenses</a> further clarify that materials are provided <em>as is</em>.</p>
 </details>
 
 
