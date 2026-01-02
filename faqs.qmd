@@ -17,158 +17,118 @@ summary:hover {
 
 If you have any questions about the [**Code and Data Sharing Policy**](https://sfs.org/review-of-financial-studies/code-sharing-policy/) (CDSP) of the *Review of Financial Studies* (RFS) and its review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>.
 
-### Before manuscript submission
+### Before paper submission
 
 <details>
 <summary>When does the updated CDSP apply to my submission?</summary>
 
-The updated CDSP applies to all submissions **conditionally accepted on or after October&nbsp;1, 2025**. If your submission was conditionally accepted before this date, the policy does not apply. Submissions that are not conditionally accepted are **not required** to provide a replication package.
+This policy applies to all submissions **conditionally accepted on or after October 1, 2025**. If your paper was conditionally accepted before this date, the policy does not apply. Papers that are not conditionally accepted do not have to provide replication packages.
 
 </details>
 
 <details>
 <summary>I want to request an **exemption** from the CDSP. What should I do?</summary>
 
-Although authors are encouraged to apply appropriate licenses to limit reuse of their code and/or data, the CDSP allows for exemptions. Requests for full or partial exemptions must be made **at the time of initial submission**.
-
-As outlined in the *Guidelines for Submission*, exemption requests must clearly state:
-
-- Which portions of the code and/or data you wish to withhold  
-- The proposed duration of withholding  
-- The justification for the request  
-
-The handling editor makes the final determination.
+While we encourage you to apply an appropriate license to limit the reuse of your code and/or data, the CDSP allows for exemptions. If you want to be (partly) exempted from the CDSP for a certain period, you have to request the exemption **at the initial submission**. As detailed in the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/), the request has to clearly indicate which portions of your code and/or data you wish to withhold, the duration of withholding, and the justification. Ultimately, the editor will decide on your request.
 
 </details>
 
 <details>
-<summary>Do I need to request exemptions for **licensed data** (e.g., CRSP or Compustat)?</summary>
+<summary>Do I have to ask for **exemptions** from sharing **licensed data** (e.g., CRSP or Compustat)?</summary>
 
-No. You should **not** request exemptions for licensed, non-public data. Such data should not be included in the replication package.
-
-</details>
-
-### Regarding the replication package
-
-<details>
-<summary>My manuscript was conditionally accepted, but the editor requested further changes. Which version should the replication package reproduce?</summary>
-
-The replication package must reproduce the results of the version that will ultimately be published.  Accordingly, the package should reflect the version you plan to resubmit.
-
-If your results have changed since the conditional acceptance, please provide the final manuscript version to the handling data editor when submitting your replication package.
+No. You should not request exemptions for licensed, non-public data. This data will not be included in the replication package.
 
 </details>
 
+### Regarding the package
+
 <details>
-<summary>Should I upload **proprietary data** to the RFS Dataverse?</summary>
+<summary>My paper was conditionally accepted, but the editor requested **further changes**. Which version of the paper should be reproduced using the replication package?</summary>
 
-No. Proprietary data should **not** be uploaded to the RFS Dataverse.
-
-Your replication package should be prepared for eventual public release and may include:
-
-- Pseudo or synthetic data  
-- Detailed instructions enabling replication  
-
-The data editor will guide you through the process of securely sharing proprietary data for verification purposes only.
-
+The replication package should reproduce the paper's results that will eventually be published. Hence, the package should reflect the version you will resubmit. 
 </details>
 
 <details>
-<summary>My submission uses **regulatory** or **on-premise data**. What should I do?</summary>
+<summary>Should I upload **proprietary data** to the RFS dataverse?</summary>
 
-Clearly describe data availability in the README file and provide pseudo-data with the same structure as the original dataset.
-
+No. You should *not* add proprietary data to the RFS dataverse when submitting your package to the data editors. Any material uploaded to the RFS dataverse could be published after the replication package is accepted.
 </details>
 
 <details>
-<summary>May I include a README that does not conform to the template?</summary>
+<summary>Can I also add a README that does not conform to the template [README](https://social-science-data-editors.github.io/template_README/)?</summary>
 
-The standardized README template is intended to harmonize practices across journals and improve the author experience. Replication packages must conform to this standard, and data editors will request revisions until compliance is achieved.
-
+The idea of the template for the [README](https://social-science-data-editors.github.io/template_README/) is a standardization of the process across journals, which aims at improving the author experience. Hence, the data editors will ask you for an update until you conform to the standards.
 </details>
 
 <details>
 <summary>Why does the RFS Dataverse default to the **CC0 license**?</summary>
 
-The default license cannot be changed at the time of submission. However, alternative licensing options are discussed on the [License](license.qmd) page, and the data editor can assist you in updating the license on the RFS Dataverse after submission.
-
+We cannot change the default. However, we provide some alternative suggestions on our [License page](license.qmd). You can update the license later on.
 </details>
 
 <details>
 <summary>If I submit to the RFS Dataverse, does my material become immediately **public**?</summary>
 
-No. Replication packages are published **only after approval** by the data editors.
-
-During verification, you may update your materials. The final, approved version will be made public once the process is complete.
-
+No. The data editors have to publish all replication packages. During the verification process, you can update the package. Then, the final version will be published after it is approved by the data editors.
 </details>
 
 <details>
-<summary>Can I include the **manuscript** in the replication package?</summary>
-
-No. Authors should not include the full manuscript in the replication package.
-
-Replication materials are typically distributed under open or permissive licenses (e.g., MIT or Modified BSD), which may conflict with publisher copyright and licensing requirements.
-
+<summary>
+Can I include the **manuscript** of my submission in the replication package?
+</summary>
+No. Authors should not include the full text of their paper in the replication package. Replication packages are typically distributed under an open-source or highly permissive license (e.g., MIT, Modified BDS), which often conflicts with the copyright and licensing terms required by the publisher.
 </details>
 
-### During verification
+### During the verification
 
 <details>
-<summary>My submission was conditionally accepted. Do I need to resubmit to the editor as well as submit the replication package?</summary>
+<summary>My paper has been conditionally accepted, should I just submit the replication package to the data editors or do I have to resubmit to the editor as well?</summary>
 
-This depends on the editor’s decision letter:
+The answer to this question depends: 
 
-1. If further revisions were requested, you must **resubmit the revised manuscript to the editor** and **submit the replication package to the data editors**.
-2. If no further revisions were requested, you only need to **submit the replication package to the data editors**.
+(1) If the editor made further revision requests in their decision letter, you have to resubmit to the editor. Additionally, you have to submit your replication package to the data editors.
+(2) If the editor did not make further requests, you only have to submit the replication package to the data editors. 
 
-The editor makes the final acceptance decision.
-
+In the end, the editor makes the final acceptance decision.
 </details>
 
 <details>
-<summary>What should I do if I cannot meet the **replication package deadline**?</summary>
+<summary>What should I do, if I cannot meet the **deadline** for submitting my replication package?</summary>
 
-Contact the data editors as soon as possible and explain the reason for the delay. While the journal aims for a timely review process, reasonable deadline extensions may be granted.
-
+Reach out to the data editors as soon as possible and explain the reasons for the delay. While the journal aims for a quick turnaround, there are valid reasons to extend the deadline.
 </details>
 
 <details>
-<summary>Who verifies that my code runs correctly?</summary>
+<summary>Who verifies that my code actually works?</summary>
 
-The data editors are responsible for verification. They will:
+The data editors verify your replication package. They will:
 
-- Review whether the documentation accurately describes the computational workflow  
-- Execute the code in a dedicated virtual computing environment  
-- Confirm that key tables and figures are reproduced  
-- Submit a verification report to the handling editor  
+- Check that your description of computational steps matches the submitted materials
+- Run your code in a dedicated virtual computing environment
+- Verify that your materials reproduce the paper's key tables and figures
+- Submit a report to the editor, who will decide on final acceptance 
 
-Authors work collaboratively with data editors throughout this process.
-
+You will work collaboratively with the data editors during this process. 
 </details>
 
 <details>
-<summary>What happens if there are **technical issues** during verification?</summary>
+<summary>What happens if there are **technical issues** in reproducing my results?</summary>
 
-If technical issues arise, the data editors will contact you confidentially and request corrections before preparing their final report for the editor.
-
+If technical issues arise, the data editors will contact you directly in a confidential manner. You will be asked to correct the issues before the data editors prepare their final report for the handling editor.
 </details>
 
 <details>
-<summary>What if the replication package produces **different results** than those reported in the manuscript?</summary>
+<summary>What if the replication package produces **different results** than those reported in my paper?</summary>
 
-If discrepancies arise, authors may update the replication package and consult the handling editor. The editor will determine whether to proceed with or reconsider the original editorial decision.
-
+If the replication package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original editorial decision. 
 </details>
 
 
 ### After publication
 
 <details>
-<summary>Am I expected to provide **technical support** to users of my replication package?</summary>
+<summary>Am I expected to provide **technical support** to other researchers who use my replication package after publication?</summary>
 
-No. The CDSP explicitly states that *“authors are not expected to provide assistance or ongoing support to users of the package.”*
-
-Your responsibility is to supply a complete and well-documented replication package at the time of publication. [Permissive licenses](license.qmd) further clarify that materials are provided *as is*.
+No. The policy explicitly states that *"Authors are not expected to provide assistance or ongoing support to users of the Package"*. Your obligation is to provide a complete, well-documented package at the time of publication, but you have no ongoing support responsibilities. Moreover, licenses such as [MIT or Modified BSD](license.qmd) further clarify that the code is provided *as is*.
 
 </details>
