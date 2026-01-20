@@ -112,6 +112,13 @@ Replication materials are typically distributed under open or permissive license
 
 </details>
 
+<details>
+<summary>How long should I preserve confidential data after publication?</summary>
+
+While we do not impose an explicit minimum retention period for confidential data, authors are strongly encouraged to preserve such data for at least five years following publication. Authors should describe their data-retention and access arrangements in the paper’s README file, including any legal or contractual constraints on sharing or preservation.
+
+</details>
+
 ### During verification
 
 <details>
