@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -176,7 +176,7 @@ flowchart LR
     subgraph DataEditors["**Data Editors**"]
         E[Onboarding]
         F[Review]
-        G[Certification]
+        G[Report]
     end
 
     A --&gt; B --&gt; C
@@ -198,16 +198,16 @@ flowchart LR
 <ul>
 <li><strong>Submission</strong>: Please read the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>. Any requests for exemption from the CDSP must be made at the time of initial submission.</li>
 <li><strong>Onboarding</strong>: All conditionally accepted manuscripts enter the data editing process. At this point, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified. For common issues that arise during onboarding, please consult the <a href="./faqs.html">FAQs</a>.</li>
-<li><strong>Review</strong>: Authors must prepare a replication package that complies with the CDSP and submit it via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The package should be prepared for eventual public release and therefore must include pseudo or synthetic data in place of any non-public data. During the review phase, however, the package will remain private. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
+<li><strong>Review</strong>: Authors must prepare a replication package that complies with the CDSP and submit it via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The package should be prepared for eventual public release and, therefore, must include pseudo or synthetic data in place of any non-public data. During the review phase, however, the package will remain private. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
 <ol type="1">
 <li>The DE configures a secure, dedicated virtual environment for the authors, based on the instructions in the <a href="https://social-science-data-editors.github.io/template_README/">README</a>.</li>
 <li>The DE verifies that the code executes successfully in this environment using the provided materials and may request revisions from the authors.</li>
 <li>Once the code runs successfully, the DE invites the authors to the environment to upload all required raw data that cannot be shared publicly.</li>
 <li>The DE verifies that the results reproduced in the authors’ environment match those reported in the submission.</li>
-<li>Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment and along with any non-public data it contained.</li>
+<li>Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained.</li>
 </ol></li>
-<li><strong>Certification</strong>: If the replication package successfully reproduces the key tables and figures from the submission, the DE will notify the handling editor of successful certification. If, however, the package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original decision.</li>
-<li><strong>Accept</strong>: Upon final acceptance, authors must update and publish their replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The DE will then host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
+<li><strong>Report</strong>: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision.</li>
+<li><strong>Accept</strong>: The editor will then decide on the resubmitted final version of the manuscript. Upon final acceptance, authors may refer to their published replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. At a later stage, the DE may choose to host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
 </ul>
 <section id="common-issues" class="level3">
 <h3 class="anchored" data-anchor-id="common-issues">Common Issues</h3>
