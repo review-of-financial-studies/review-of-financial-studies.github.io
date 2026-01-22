@@ -176,7 +176,7 @@ flowchart LR
     subgraph DataEditors["**Data Editors**"]
         E[Onboarding]
         F[Review]
-        G[Certification]
+        G[Report]
     end
 
     A --&gt; B --&gt; C
@@ -206,8 +206,8 @@ flowchart LR
 <li>The DE verifies that the results reproduced in the authors’ environment match those reported in the submission.</li>
 <li>Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment and along with any non-public data it contained.</li>
 </ol></li>
-<li><strong>Certification</strong>: If the replication package successfully reproduces the key tables and figures from the submission, the DE will notify the handling editor of successful certification. If, however, the package yields results that differ from those reported in the paper, the handling editor will decide whether to proceed with or reverse the original decision.</li>
-<li><strong>Accept</strong>: Upon final acceptance, authors must update and publish their replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The DE will then host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
+<li><strong>Report</strong>: The DE submits a a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision.</li>
+<li><strong>Accept</strong>: Upon final acceptance, authors may upload their final manuscript and refer to their published replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. At a later stage, the DE may choose to host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
 </ul>
 <section id="common-issues" class="level3">
 <h3 class="anchored" data-anchor-id="common-issues">Common Issues</h3>
