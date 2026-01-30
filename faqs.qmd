@@ -88,9 +88,11 @@ The standardized README template is intended to harmonize practices across journ
 </details>
 
 <details>
-<summary>Why does the RFS Dataverse default to the **CC0 license**?</summary>
+<summary>Why does the RFS Dataverse default to the **MIT license**?</summary>
 
-The default license cannot be changed at the time of submission. However, alternative licensing options are discussed on the [License](license.qmd) page, and the data editor can assist you in updating the license on the RFS Dataverse after submission.
+The MIT license was the most used license by authors. However, alternative licensing options are discussed on the [License](license.qmd) page, and the data editor can assist you in updating the license on the RFS Dataverse after submission.
+
+If you do not use the RFS Dataverse template, the dataverse platform may default to a different license (e.g., **CC0**). You should update the license to reflect your intended terms of use.
 
 </details>
 
