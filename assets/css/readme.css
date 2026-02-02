@@ -2,10 +2,10 @@
 :root {
   --ink: #1a1a2e;
   --paper: #faf9f7;
-  --accent: #2d5a7b;
+  --accent: #2a6197;
   --accent-light: #e8f0f5;
-  --success: #2e7d4a;
-  --success-bg: #5b8768ff;
+  --success: #2a6197;
+  --success-bg: #2a6197;
   --warning: #b86e00;
   --warning-bg: #fff4e5;
   --border: #d4d2cd;
@@ -42,11 +42,22 @@
   font-size: 1.1rem;
 }
 
+/* Sticky progress bar container */
+.readme-checker .progress-container {
+  position: sticky;
+  top: 0;
+  padding: 1rem 0.5rem 0.5rem;
+  z-index: 100;
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+}
+
 .readme-checker .progress-bar {
   background: var(--border);
   height: 6px;
   border-radius: 3px;
-  margin: 8px;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -61,11 +72,15 @@
   text-align: center;
   font-size: 0.9rem;
   color: var(--muted);
-  margin-bottom: 2rem;
+  margin: 0.5rem 0 0 0;
 }
 
 .readme-checker .section {
   margin-bottom: 2.5rem;
+}
+
+.readme-checker .section:first-of-type {
+  margin-top: 1.5rem;
 }
 
 .readme-checker .section-header {
@@ -336,5 +351,9 @@
 
   .readme-checker .question {
     padding: 1rem;
+  }
+  
+  .readme-checker .progress-container {
+    padding: 0.75rem 0.25rem 0.5rem;
   }
 }

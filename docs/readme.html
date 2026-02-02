@@ -146,15 +146,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="readme-checker">
-  <div class="progress-bar">
-    <div class="progress-fill" id="progressFill"></div>
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <p class="progress-text"><span id="answeredCount">0</span> of <span id="totalCount">0</span> items addressed</p>
   </div>
-  <p class="progress-text"><span id="answeredCount">0</span> of <span id="totalCount">0</span> items addressed</p>
 
   <main id="checklist"></main>
 
   <div class="summary" id="summary">
-    <h3 class="anchored">Completeness Summary</h3>
     <div class="summary-stats">
       <div class="stat">
         <div class="stat-number" id="completePct">0%</div>
