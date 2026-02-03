@@ -12,6 +12,8 @@ website:
         href: index.qmd
       - text: "FAQs"
         href: faqs.qmd
+      - text: "README Checker"
+        href: readme.qmd
       - text: "License"
         href: license.qmd
 
@@ -19,6 +21,6 @@ format:
   html:
     theme:
       - cosmo
-    css: styles.css
+    css: assets/css/styles.css
     toc: true
     email-obfuscation: javascript

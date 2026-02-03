@@ -170,6 +170,11 @@ If discrepancies arise, authors may update the replication package and consult t
 
 </details>
 
+<details>
+<summary>As part of the verification, I was asked to join Nuvolos. Is this a **safe** environment?</summary>
+
+Yes. Nuvolos is a managed platform built on top of Microsoft Azure. Microsoft Azure maintains compliance with and certifications for many standards, including ISO 27001 and SOC 2, and offers resources to help customers meet FERPA requirements.
+</details>
 
 ### After publication
 
