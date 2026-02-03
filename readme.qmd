@@ -326,6 +326,7 @@ All tables and figures in the paper and the online appendix.`
         },
         {
           text: "For each table and figure, where is it generated, and how are the output files named?",
+          label: "My README includes a summary table listing all tables and figures, along with the corresponding programs and output files.",
           example: `| Figure/Table | Program | Output file | Notes |
 |-------------|--------|-------------|------|
 | Table 1 | \`02_analysis/table1.do\` | \`table1.csv\` | Summary statistics |
