@@ -45,13 +45,16 @@ format:
       title: "Title and Overview",
       questions: [
         {
-          text: "Does your README include the exact title of the paper and author names?",
-          example: `README for "Minimum Wages and Employment Dynamics"
-Authors: Jane Doe (University of Example), John Smith (Research Institute)`
+          text: "What is the exact title of the paper, and who are the authors?",
+          example: `Replication package for "Firm Characteristics and the Cross Section of Stock Returns" by Jane Doe and John Smith.`
         },
         {
-          text: "Does your README provide a short overview paragraph describing what the package contains and how to proceed?",
-          example: `This replication package contains code and data required to reproduce all tables and figures in the paper. The workflow consists of (i) downloading and cleaning raw data from public sources, (ii) constructing the final analysis dataset, and (iii) running estimation routines that generate the results. All steps can be executed by running the main script programs/main.do. Total runtime is approximately 2 hours.`
+          text: "In one short paragraph, what does this replication package contain, and how should a replicator proceed from start to finish?",
+          example: `This replication package contains code and data required to reproduce all tables and figures in the paper. The workflow consists of (i) downloading and cleaning raw data from public sources, (ii) constructing the final analysis dataset, and (iii) running estimation routines that generate the results. All steps can be executed by running the main script main.do. Total runtime is approximately 2 hours.
+
+<span class="or-divider">— or —</span>
+
+This replication package contains code and pseudo-data that allow users to run the full workflow and reproduce the analysis pipeline. The original licensed data used in the paper cannot be redistributed. The workflow consists of (i) loading pseudo-data with the same structure and key variable definitions as the original raw data, (ii) constructing the analysis data, and (iii) running the estimation routines that produce the tables and figures. All steps can be executed by running the main script main.do. Total runtime is approximately 10 minutes.`
         }
       ]
     },
@@ -59,19 +62,19 @@ Authors: Jane Doe (University of Example), John Smith (Research Institute)`
       title: "Data Availability and Provenance",
       questions: [
         {
-          text: "Does your README state whether the paper uses external (non-simulated) data?",
-          example: `This paper involves analysis of external data.
+          text: "Does the paper use any external (non-simulated) data?",
+          example: `This paper analyzes external data.
 
 <span class="or-divider">— or —</span>
 
-This paper does not involve analysis of external data; all data are simulated within the provided code.
+This paper does not involve analyzing external data; all data are simulated within the provided code.
 
 <span class="or-divider">— or —</span>
 
 All data are publicly available and downloaded automatically by the replication code.`
         },
         {
-          text: "Does your README include a statement certifying the authors have rights to use the data?",
+          text: "Do you provide a statement about rights?",
           example: `I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
 
 <span class="or-divider">— or —</span>
@@ -79,11 +82,19 @@ All data are publicly available and downloaded automatically by the replication 
 I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package.`
         },
         {
-          text: "Does your README specify what license governs the data?",
+          text: "Do you have the legal right to use and redistribute the data?",
+          example: `The authors have legitimate access to all data used in this manuscript.
+
+<span class="or-divider">— or —</span>
+
+The authors have permission to redistribute the data included in this replication package.`
+        },
+        {
+          text: "Under what license are the data distributed?",
           example: `The data are distributed under a Creative Commons Attribution 4.0 (CC-BY 4.0) license. See LICENSE.txt for details.`
         },
         {
-          text: "Does your README state the overall public availability status of the data?",
+          text: "What is the overall public availability status of the data?",
           example: `All data are publicly available.
 
 <span class="or-divider">— or —</span>
@@ -97,11 +108,11 @@ All data are included in the replication package.`
       ]
     },
     {
-      title: "Data Source Details",
+      title: "Summary and Details of Data Sources",
       questions: [
         {
-          text: "For each data source, does your README document: source, format, access method, and whether it's included?",
-          example: `The unemployment rate data is downloaded from the Federal Reserve Economic Data (FRED) database maintained by the Federal Reserve Bank of St. Louis.
+          text: "For each data source, where does the data come from, what format is it in, how did you obtain access, and is it included with your replication package?",
+          example: `The unemployment rate data is downloaded from the Federal Reserve Economic Data (FRED) database maintained by the Federal Reserve Bank of St. Louis. The data series UNRATE contains the U.S. civilian unemployment rate as a percentage of the civilian labor force.
 
 Data source: Federal Reserve Bank of St. Louis, FRED
 Series ID: UNRATE
@@ -110,22 +121,61 @@ Access: Public use, no registration required
 Format: CSV
 License: Public domain (U.S. government data)
 Download method: The code automatically downloads the data via the URL
-Provided: Yes`
+Provided: Yes
+
+<span class="or-divider">— or —</span>
+
+The mutual fund data are obtained from the Morningstar Mutual Fund Database maintained by Morningstar, Inc. The database contains detailed information on U.S. mutual funds, including fund returns, total net assets, expense ratios, investment objectives, and portfolio characteristics.
+
+Data source: Morningstar, Inc.
+Database: Morningstar Mutual Fund Database (Morningstar Direct)
+URL: https://www.morningstar.com/products/direct
+Access: Subscription-based; requires institutional or individual license
+Format: Proprietary database export (CSV/Excel)
+License: Proprietary; redistribution not permitted under standard licensing terms
+Download method: Data are manually downloaded via the Morningstar Direct platform
+Provided: No (licensed data cannot be redistributed)
+
+<span class="or-divider">— or —</span>
+
+The stock return data are obtained from the CRSP Monthly Stock File maintained by the Center for Research in Security Prices (CRSP) and distributed through Wharton Research Data Services (WRDS). The dataset contains monthly returns, prices, shares outstanding, and security identifiers for U.S. common stocks listed on major exchanges.
+
+Data source: Center for Research in Security Prices (CRSP)
+Database: CRSP Monthly Stock File (via WRDS)
+URL: https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/center-for-research-in-security-prices-crsp/
+Access: Subscription-based; requires institutional WRDS license
+Format: Proprietary database export (CSV)
+License: Proprietary; redistribution not permitted under standard licensing terms
+Download method: Data are downloaded via the WRDS web interface
+Provided: No (licensed data cannot be redistributed)`
         },
         {
-          text: "Does your README include a summary table of all datasets?",
-          example: `| Dataset | Source | Format | Provided | License |
-|---------|--------|--------|----------|---------|
-| UNRATE | FRED | CSV | Yes | Public domain |
-| CPS | Census | Stata | No | Restricted |`
+          text: "Can you summarize all datasets in a table?",
+          example: `| Data file | Source | Notes | Provided |
+|----------|--------|-------|----------|
+| \`data/raw/unrate.dta\` | FRED | Unemployment rate | Yes |
+| \`data/raw/cpi.dta\` | FRED | CPI index | Yes |
+| \`data/analysis/main.dta\` | Derived | Final analysis dataset | Yes |`
         },
         {
-          text: "Does your README indicate whether a data dictionary or codebook is provided, and where?",
-          example: `Variable labels are included in the pseudo-data .dta files.
+          text: "Is there a data dictionary or codebook, and where is it?",
+          example: `Variable labels are included in the pseudo-data.dta files.
 
 <span class="or-divider">— or —</span>
 
 A full codebook that describes each variable and table is provided in codebook.xlsx.`
+        },
+        {
+          text: "Did you remove all licensed/proprietary data in the replication package that you upload to the RFS Dataverse?",
+          example: `The replication package does not violate license agreements.`
+        },
+        {
+          text: "Does your replication package contain pseudo-data for those data sources that cannot be shared publicly?",
+          example: `The replication package includes pseudo-data when the raw data cannot be shared. We have verified that the pseudo-data allows the replication code to execute without errors.`
+        },
+        {
+          text: "For confidential data, do you commit to preserving it for a specified period?",
+          example: `The authors preserve all confidential data for five years after publication.`
         }
       ]
     },
@@ -133,17 +183,11 @@ A full codebook that describes each variable and table is provided in codebook.x
       title: "Computational Requirements",
       questions: [
         {
-          text: "Does your README list all required software and versions?",
-          example: `The code was last run using Stata 18 MP. The required user-written packages are estout and reghdfe, both included in the ado directory.
-
-<span class="or-divider">— or —</span>
-
-Software: Python 3.11, R 4.3.0
-Python packages: pandas 2.0.0, numpy 1.24.0, statsmodels 0.14.0
-R packages: tidyverse 2.0.0, fixest 0.11.0`
+          text: "What software is required, and do you include versions and packages?",
+          example: `The code was last run using Stata 18 MP. The required user-written packages are estout and reghdfe. All packages are included in the ado directory.`
         },
         {
-          text: "Does your README describe how to install dependencies (setup script or instructions)?",
+          text: "Is there an automated setup or dependency installation script?",
           example: `The replication package includes setup.do, which installs all required packages and creates the necessary directory structure.
 
 <span class="or-divider">— or —</span>
@@ -151,8 +195,8 @@ R packages: tidyverse 2.0.0, fixest 0.11.0`
 Various Python packages recorded in the pyproject.toml and uv.lock. By running uv sync, the required packages and their versions are installed.`
         },
         {
-          text: "Does your README address random number generation and seed setting?",
-          example: `Random seed is set at line 12 of program programs/config.do
+          text: "Does the analysis rely on randomness, and if so, how is it controlled?",
+          example: `Random seed is set at line 12 of the program programs/config.do.
 
 <span class="or-divider">— or —</span>
 
@@ -163,49 +207,57 @@ The analysis relies on random number generation, but setting a seed is not possi
 No pseudo-random number generator is used in the analysis.`
         },
         {
-          text: "Does your README provide an estimate of runtime?",
-          example: `Approximate time needed to reproduce the analyses on a standard (2025) desktop machine: 10-60 minutes`
+          text: "How long does replication take on a standard desktop machine?",
+          example: `Approximate time needed to reproduce the analyses on a standard (2026) desktop machine: 10-60 minutes.
+
+<span class="or-divider">— or —</span>
+
+Approximate time needed to reproduce the analyses on a scientific computing cluster with 200 cores: 4 days. In particular, programs/monte_carlo.py takes 90% of the computing time.`
         },
         {
-          text: "Does your README state the required disk space?",
+          text: "How much disk space is required in total?",
           example: `Approximate storage space needed: 25 MB - 250 MB`
         },
         {
-          text: "Does your README describe the machine on which the code was last run?",
+          text: "On what type of machine was the code last run?",
           example: `The code was last run on a 4-core laptop running macOS 14 with 16GB RAM and approximately 50GB of free disk space.`
+        },
+        {
+          text: "Does your code use forward slashes for file paths to ensure the package works across operating systems?",
+          example: `All programs consistently use forward slashes ("/") for file paths to ensure compatibility across different operating systems.`
+        },
+        {
+          text: "Does the code use relative paths from the project root?",
+          example: `All file paths are defined relative to the project root, minimizing the need for manual path adjustments and improving portability.`
         }
       ]
     },
     {
-      title: "Program Description",
+      title: "Description of Programs",
       questions: [
         {
-          text: "Does your README identify the main entry point for replication?",
-          example: `Running programs/main.do executes all steps in the correct order.
+          text: "What is the main entry point for replication?",
+          example: `Opening main.do automatically identifies the project root and running it executes all steps in the correct sequence.
 
 <span class="or-divider">— or —</span>
 
-To replicate all results, run: python main.py`
+Set the path in programs/main.do to the root of the project directory. Executing the script will then run all steps in the correct sequence.`
         },
         {
-          text: "Does your README describe any ordering dependencies or special execution rules?",
-          example: `Programs in 02_analysis must be run sequentially, as later scripts depend on outputs from earlier ones.
-
-<span class="or-divider">— or —</span>
-
-All scripts are independent and can be run in any order after the data preparation step.`
+          text: "Are there ordering dependencies or special execution rules?",
+          example: `Programs in 02_analysis must be run sequentially, as later scripts depend on outputs from earlier ones.`
         },
         {
-          text: "Does your README specify the license for the code?",
+          text: "What license governs the code?",
           example: `The code is licensed under the MIT License. See LICENSE.txt for details.`
         }
       ]
     },
     {
-      title: "Replication Instructions",
+      title: "Instructions to Replicators",
       questions: [
         {
-          text: "Does your README provide step-by-step instructions for replicators?",
+          text: "What exact steps should a replicator follow, in order?",
           example: `1. Ensure you have Python 3.13 installed
 2. Ensure you have uv installed
 3. Run uv sync to install dependencies
@@ -213,45 +265,57 @@ All scripts are independent and can be run in any order after the data preparati
 5. Run uv run python main.py`
         },
         {
-          text: "Does your README note any manual or non-automated steps?",
+          text: "Are there any manual or non-automated steps?",
           example: `No manual steps are required; all procedures are fully automated.
 
 <span class="or-divider">— or —</span>
 
-Figure 1 must be generated manually using Excel following the instructions below.`
+Figure 1 must be generated manually using Excel by following the instructions below.`
+        },
+        {
+          text: "Did you verify that the steps for replicators work as intended?",
+          example: `The authors verified that the instructions ran successfully in a clean environment on their local machine before submission, and the data editors independently verified them again.`
         }
       ]
     },
     {
-      title: "Output Mapping",
+      title: "List of Tables and Programs",
       questions: [
         {
-          text: "Does your README state which tables and figures are reproduced by the code?",
+          text: "Which tables and figures are reproduced by the provided code?",
           example: `All tables and figures in the main paper.
 
 <span class="or-divider">— or —</span>
 
-All tables and figures in the paper and online appendix.`
+All tables and figures in the paper and the online appendix.`
         },
         {
-          text: "Does your README include a mapping of outputs to programs?",
-          example: `| Output | Program | Output file |
-|--------|---------|-------------|
-| Table 1 | 02_analysis/table1.do | results/table1.tex |
-| Figure 1 | 02_analysis/figure1.R | figures/figure1.pdf |
-| Table A1 | 03_appendix/tableA1.do | results/tableA1.tex |`
+          text: "For each table and figure, where is it generated, and how are the output files named?",
+          example: `| Figure/Table | Program | Output file | Notes |
+|-------------|--------|-------------|------|
+| Table 1 | \`02_analysis/table1.do\` | \`table1.csv\` | Summary statistics |
+| Figure 2 | \`02_analysis/fig2.do\` | \`figure2.png\` | Baseline results |`
         }
       ]
     },
     {
-      title: "References and Acknowledgements",
+      title: "References",
       questions: [
         {
-          text: "Does your README include formal citations for all datasets used?",
-          example: `Federal Reserve Bank of St. Louis. "Unemployment Rate [UNRATE]." FRED, Federal Reserve Bank of St. Louis. https://fred.stlouisfed.org/series/UNRATE (accessed January 15, 2025).`
-        },
+          text: "Are all datasets, even confidential ones, cited?",
+          example: `Standard and Poor's (S&P). 2024. Compustat-Capital IQ. Wharton Research Data Services. https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/sp-global-market-intelligence/
+
+<span class="or-divider">— or —</span>
+
+Center for Research in Security Prices (CRSP). 2026. CRSP Stock File. Wharton Research Data Services. https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/center-for-research-in-security-prices-crsp/`
+        }
+      ]
+    },
+    {
+      title: "Acknowledgements",
+      questions: [
         {
-          text: "Does your README acknowledge any templates or external materials used?",
+          text: "Did you adapt templates, reuse text, or receive permission for materials?",
           example: `This README template was adapted from the Social Science Data Editors' README template, available at https://social-science-data-editors.github.io/template_README/`
         }
       ]
