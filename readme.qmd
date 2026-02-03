@@ -361,7 +361,7 @@ Center for Research in Security Prices (CRSP). 2026. CRSP Stock File. Wharton Re
           <div class="checkbox-group">
             <label class="checkbox-label">
               <input type="checkbox" data-section="${sIdx}" data-question="${qIdx}" onchange="updateProgress()">
-              <span>Yes, my README includes this</span>
+              <span>Yes, my README includes this.</span>
             </label>
           </div>
           <button class="example-toggle" onclick="toggleExample('${qId}')">
