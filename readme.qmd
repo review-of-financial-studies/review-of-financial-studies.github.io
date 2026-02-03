@@ -7,6 +7,10 @@ format:
 
 ```{=html}
 <div class="readme-checker">
+  <div class="intro-actions">
+    <p>Use this interactive checklist to ensure your README is complete, or <a href="assets/prompts/readme-review-prompt.txt" download="readme-review-prompt.txt">download our review prompt</a> to get detailed feedback from the LLM of your choice.</p>
+  </div>
+
   <div class="progress-container">
     <div class="progress-bar">
       <div class="progress-fill" id="progressFill"></div>
@@ -32,6 +36,9 @@ format:
       </div>
     </div>
     <div id="summaryMessage"></div>
+    <div class="summary-actions">
+      <p>Want a second opinion? <a href="assets/prompts/readme-review-prompt.txt" download="readme-review-prompt.txt">Download our review prompt</a> to check your README with the LLM of your choice.</p>
+    </div>
   </div>
 
   <footer class="checker-footer">
