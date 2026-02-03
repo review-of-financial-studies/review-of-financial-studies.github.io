@@ -126,7 +126,7 @@ For **each data source**:
 
 **Questions to check:**
 - Are **all datasets cited**, including proprietary and confidential ones?
-- Are CRSP, Compustat, Morningstar, etc. properly referenced?
+- Are CRSP, Compustat, Morningstar, etc., properly referenced?
 - Are URLs or persistent identifiers provided where appropriate?
 
 ---
