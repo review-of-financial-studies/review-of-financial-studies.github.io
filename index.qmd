@@ -39,11 +39,11 @@ flowchart LR
 
 - **Submission**: Please read the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/). Any requests for exemption from the CDSP must be made at the time of initial submission.
 - **Onboarding**: All conditionally accepted manuscripts enter the data editing process. At this point, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified. For common issues that arise during onboarding, please consult the [FAQs](faqs.qmd).
-- **Review**: Authors must prepare a replication package that complies with the CDSP and submit it via the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). The package should be prepared for eventual public release and, therefore, must include pseudo or synthetic data in place of any non-public data. During the review phase, however, the package will remain private. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
+- **Review**: Authors must prepare a replication package that complies with the CDSP and submit it via the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). The package should be prepared for eventual public release and, therefore, must include pseudo or synthetic data in place of any non-public data. To help authors prepare a comprehensive README, the DE provide a [README Checker](readme.qmd) that walks through all required elements with best-practice examples. During the review phase, the package will remain private. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
   1. The DE configures a secure, dedicated virtual environment for the authors, based on the instructions in the [README](https://social-science-data-editors.github.io/template_README/).
   2. The DE verifies that the code executes successfully in this environment using the provided materials and may request revisions from the authors.
   3. Once the code runs successfully, the DE invites the authors to the environment to upload all required raw data that cannot be shared publicly.
-  4. The DE verifies that the results reproduced in the authors’ environment match those reported in the submission.
+  4. The DE verifies that the results reproduced in the authors' environment match those reported in the submission.
   5. Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained.
 - **Report**: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision.
 - **Accept**: The editor will then decide on the resubmitted final version of the manuscript. Upon final acceptance, authors may refer to their published replication package in the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). At a later stage, the DE may choose to host the verified code and accompanying report in a public GitHub repository under the [RFS organization](https://github.com/review-of-financial-studies).
@@ -66,6 +66,7 @@ Beyond these general requirements, the topics summarized below frequently arise 
 - The DE maintain a list of common questions in the [FAQs](faqs.qmd).
 - The DE also provide detailed guidance on [licensing and recommended practices](license.qmd).
 - The DE will enforce the content of the [template README](https://social-science-data-editors.github.io/template_README/). 
+- The DE maintain a [README Checker](readme.qmd) that walks through all required elements with best-practice examples
 
 ## Contact
 
