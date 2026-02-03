@@ -12,7 +12,7 @@ website:
         href: index.qmd
       - text: "FAQs"
         href: faqs.qmd
-      - text: "README Checker"
+      - text: "README Checklist"
         href: readme.qmd
       - text: "License"
         href: license.qmd
