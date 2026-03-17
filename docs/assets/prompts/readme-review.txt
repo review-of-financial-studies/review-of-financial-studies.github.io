@@ -125,7 +125,7 @@ For **each data source**:
 
 **Best-practice examples:**
 
-*Public data source (auto-downloaded):*
+*Public data source:*
 
 > The unemployment rate data is downloaded from the Federal Reserve Economic Data (FRED) database maintained by the Federal Reserve Bank of St. Louis.
 >
@@ -138,7 +138,7 @@ For **each data source**:
 > - Download method: The code automatically downloads the data via the URL
 > - Provided: Yes
 
-*Subscription-based source (not redistributable):*
+*Subscription-based source:*
 
 > The mutual fund data are obtained from the Morningstar Mutual Fund Database maintained by Morningstar, Inc.
 >
