@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Review of Financial Studies – RFS Data Editors</title>
+<title>RFS Dataverse – RFS Data Editors</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,9 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -96,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -112,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">License</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dataverse.html"> 
+    <a class="nav-link active" href="./dataverse.html" aria-current="page"> 
 <span class="menu-text">RFS Dataverse</span></a>
   </li>  
 </ul>
@@ -131,12 +128,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#process" id="toc-process" class="nav-link active" data-scroll-target="#process">Process</a>
-  <ul class="collapse">
-  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues">Common Issues</a></li>
-  </ul></li>
-  <li><a href="#further-information" id="toc-further-information" class="nav-link" data-scroll-target="#further-information">Further Information</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#why-the-rfs-dataverse" id="toc-why-the-rfs-dataverse" class="nav-link active" data-scroll-target="#why-the-rfs-dataverse">Why the RFS Dataverse?</a></li>
+  <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before You Start</a></li>
+  <li><a href="#step-1-create-the-dataset" id="toc-step-1-create-the-dataset" class="nav-link" data-scroll-target="#step-1-create-the-dataset">Step 1: Create the Dataset</a></li>
+  <li><a href="#step-2-select-the-host-dataverse-and-template" id="toc-step-2-select-the-host-dataverse-and-template" class="nav-link" data-scroll-target="#step-2-select-the-host-dataverse-and-template">Step 2: Select the Host Dataverse and Template</a></li>
+  <li><a href="#step-3-add-metadata" id="toc-step-3-add-metadata" class="nav-link" data-scroll-target="#step-3-add-metadata">Step 3: Add Metadata</a></li>
+  <li><a href="#step-4-set-the-citation" id="toc-step-4-set-the-citation" class="nav-link" data-scroll-target="#step-4-set-the-citation">Step 4: Set the Citation</a></li>
+  <li><a href="#step-5-upload-files" id="toc-step-5-upload-files" class="nav-link" data-scroll-target="#step-5-upload-files">Step 5: Upload Files</a></li>
+  <li><a href="#step-6-save-and-submit-for-review" id="toc-step-6-save-and-submit-for-review" class="nav-link" data-scroll-target="#step-6-save-and-submit-for-review">Step 6: Save and Submit for Review</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
   </ul>
 </nav>
     </div>
@@ -145,8 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Review of Financial Studies</h1>
-<p class="subtitle lead">Data Editor Website</p>
+<h1 class="title">RFS Dataverse</h1>
 </div>
 
 
@@ -163,115 +162,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website provides key information about the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/"><strong>Code and Data Sharing Policy</strong></a> (CDSP) and the pre-acceptance reproducibility checks implemented at the <em>Review of Financial Studies</em> (RFS).</p>
-<section id="process" class="level2">
-<h2 class="anchored" data-anchor-id="process">Process</h2>
-<p>The diagram below illustrates how authors interact with the CDSP and the RFS <em>Data Editors</em> (DE) throughout the editorial process.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">%%{init: {"themeVariables": { "fontSize": "24px"}}}%%
-flowchart LR
-    subgraph Editors["**Editors**"]
-        A[Submission]
-        B[Revisions]
-        C["Conditional Accept"]
-        D[Accept]
-    end
-
-    subgraph DataEditors["**Data Editors**"]
-        E[Onboarding]
-        F[Review]
-        G[Report]
-    end
-
-    A --&gt; B --&gt; C
-    C -.-&gt; D
-
-    C --&gt; E --&gt; F --&gt; G --&gt; D
-
-    style A fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style E fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style F fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style G fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style D fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<p>This page walks you through uploading your replication package to the <a href="https://dataverse.harvard.edu/dataverse/rfs/">RFS Dataverse</a>. It assumes you have already created a Harvard Dataverse account and are logged in.</p>
+<section id="why-the-rfs-dataverse" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-rfs-dataverse">Why the RFS Dataverse?</h2>
+<p>The RFS Dataverse is the official archive for replication materials accompanying papers published in the <em>Review of Financial Studies</em>. A few practical advantages worth knowing up front:</p>
 <ul>
-<li><strong>Submission</strong>: Please read the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>. Any requests for exemption from the CDSP must be made at the time of initial submission.</li>
-<li><strong>Onboarding</strong>: All conditionally accepted manuscripts enter the data editing process. At this point, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified. For common issues that arise during onboarding, please consult the <a href="./faqs.html">FAQs</a>.</li>
-<li><strong>Review</strong>: Authors must prepare a replication package that complies with the CDSP and submit it via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The package should be prepared for eventual public release and, therefore, must include pseudo or synthetic data in place of any non-public data. To help authors prepare a comprehensive README, the DE provide a <a href="./readme.html">README Checklist</a> that walks through all required elements with best-practice examples. During the review phase, the package will remain private. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
+<li><strong>Privacy during review.</strong> Your materials remain private (visible only to the authors and the Data Editors) until the Data Editor process is complete and the dataset is explicitly published.</li>
+<li><strong>Persistent versioning.</strong> Once a replication package is published, any subsequent updates create new versions while older versions remain online. This protects the integrity of the published record and gives readers a stable target to cite.</li>
+<li><strong>DOI and citation.</strong> Each dataset receives a permanent DOI that can be cited alongside the paper.</li>
+<li><strong>Direct support from the RFS Data Editors.</strong> Materials submitted to the RFS Dataverse can be reviewed and assisted directly by our team.</li>
+</ul>
+</section>
+<section id="before-you-start" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-start">Before You Start</h2>
+<p>Before creating a dataset, we recommend that you:</p>
 <ol type="1">
-<li>The DE configures a secure, dedicated virtual environment for the authors, based on the instructions in the <a href="https://social-science-data-editors.github.io/template_README/">README</a>.</li>
-<li>The DE verifies that the code executes successfully in this environment using the provided materials and may request revisions from the authors.</li>
-<li>Once the code runs successfully, the DE invites the authors to the environment to upload all required raw data that cannot be shared publicly.</li>
-<li>The DE verifies that the results reproduced in the authors’ environment match those reported in the submission.</li>
-<li>Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained.</li>
-</ol></li>
-<li><strong>Report</strong>: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision.</li>
-<li><strong>Accept</strong>: The editor will then decide on the resubmitted final version of the manuscript. Upon final acceptance, authors may refer to their published replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. At a later stage, the DE may choose to host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
-</ul>
-<section id="common-issues" class="level3">
-<h3 class="anchored" data-anchor-id="common-issues">Common Issues</h3>
-<p>Experience from prior reviews indicates that a limited set of recurring issues accounts for most delays during the data editor process. Many of these delays can be avoided by ensuring that the replication package includes a <a href="https://social-science-data-editors.github.io/template_README/">README</a> that follows the Social Science Data Editors template (version 1.1) for standardized documentation, as well as a <a href="./license.html">LICENSE file</a> that clearly specifies the terms governing the use of the code and data.</p>
-<p>Beyond these general requirements, the topics summarized below frequently arise during review and should ideally be addressed prior to submission:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Topic</th>
-<th>Stata</th>
-<th>Python</th>
-<th>R</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Project execution</strong></td>
-<td>Do not use <code>cd</code> to change directories within scripts. Launch Stata from the project root (e.g., open <code>main.do</code> in the root or use a Stata project file).</td>
-<td>Do not use <code>os.chdir()</code>. Run code from the project root (e.g., <code>uv run python main.py</code> or <code>runpy.run_path()</code>), with all paths relative to the root.</td>
-<td>Do not use <code>setwd()</code>. Run R from the project root (e.g., open the folder directly in RStudio, Positron, or VS Code).</td>
-</tr>
-<tr class="even">
-<td><strong>File paths &amp; portability</strong></td>
-<td>Use relative paths with forward slashes (<code>/</code>). Avoid backslashes (<code>\</code>), which are Windows-specific.</td>
-<td>Use relative paths with forward slashes (<code>/</code>) or <code>pathlib.Path</code>. Avoid hard-coded absolute paths.</td>
-<td>Use relative paths with forward slashes (<code>/</code>). Do not rely on escaped backslashes (<code>\\</code>).</td>
-</tr>
-<tr class="odd">
-<td><strong>Dependency management</strong></td>
-<td>Document the Stata environment and required packages in <code>setup.do</code> (<code>ado</code>-path included).</td>
-<td>Use reproducible, cross-platform lockfiles (e.g., <code>uv</code>) rather than <code>pip freeze</code>-based <code>requirements.txt</code>.</td>
-<td>Use <code>renv.lock</code> to document and restore the R environment.</td>
-</tr>
-<tr class="even">
-<td><strong>Examples</strong></td>
-<td><a href="https://github.com/review-of-financial-studies/template-stata">Stata project template</a></td>
-<td><a href="https://github.com/review-of-financial-studies/template-python">Python project template</a></td>
-<td><a href="https://github.com/review-of-financial-studies/template-r">R project template</a></td>
-</tr>
-</tbody>
-</table>
+<li>Organize the replication package locally with a clear folder structure, a <a href="./readme.html"><code>README</code></a> describing how to reproduce every table and figure in the paper, and a <a href="./license.html"><code>LICENSE</code> file</a>.</li>
+<li>Verify that no large output files, intermediate caches, or restricted-access data are included unintentionally.</li>
+</ol>
+<p>If you are unsure whether a particular file should be included, the Data Editors are happy to advise <em>before</em> you upload.</p>
 </section>
+<section id="step-1-create-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-create-the-dataset">Step 1: Create the Dataset</h2>
+<p>On the main page of the <a href="https://dataverse.harvard.edu/dataverse/rfs/">RFS Dataverse</a>, click the <strong>Add Data</strong> button and select <strong>New Dataset</strong> from the dropdown.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Do not select “New Dataverse”.</strong> A Dataverse is a <em>collection</em> of datasets — choosing this option creates a separate, parallel space that has nothing to do with the RFS and over which the RFS Data Editors have no administrative control. We cannot delete or move stray Dataverses on your behalf; you would need to contact Harvard Dataverse general support directly.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/dataverse-create.png" class="img-fluid figure-img"></p>
+<figcaption>Create a new dataset in the RFS Dataverse</figcaption>
+</figure>
+</div>
 </section>
-<section id="further-information" class="level2">
-<h2 class="anchored" data-anchor-id="further-information">Further Information</h2>
+<section id="step-2-select-the-host-dataverse-and-template" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-select-the-host-dataverse-and-template">Step 2: Select the Host Dataverse and Template</h2>
+<p>Two fields on the new-dataset form deserve special attention:</p>
 <ul>
-<li>The DE maintain a list of common questions in the <a href="./faqs.html">FAQs</a>.</li>
-<li>The DE also provide detailed guidance on <a href="./license.html">licensing and recommended practices</a>.</li>
-<li>The DE will enforce the content of the <a href="https://social-science-data-editors.github.io/template_README/">template README</a>.</li>
-<li>The DE maintain a <a href="./readme.html">README Checklist</a> that walks through all required elements with best-practice examples</li>
+<li><strong>Host Dataverse.</strong> This <em>must</em> be set to <strong>Review of Financial Studies Dataverse</strong>. If you accidentally submit to the general Harvard Dataverse, the RFS Data Editors cannot access or review your materials. Harvard Dataverse staff can in principle move datasets between collections after the fact, but the process is cumbersome and error-prone — please avoid it.</li>
+<li><strong>Dataset Template.</strong> Select the RFS template. It pre-fills several fields and includes inline hints that mirror the guidance on this page.</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/dataverse-host.png" class="img-fluid figure-img"></p>
+<figcaption>Select the correct host and template for the dataset</figcaption>
+</figure>
+</div>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>If you have any questions about the CDSP of the RFS and the above review process, please reach out to <a href="mailto:dataeditor@sfs.org">dataeditor@sfs.org</a>. If you have submitted your paper, please add the assigned manuscript ID to your communication.</p>
-<p>Currently, <a href="https://www.linkedin.com/in/christophscheuch/">Christoph Scheuch</a> and <a href="https://sites.google.com/view/patrick-weiss">Patrick Weiss</a> act as data editors for the RFS.</p>
+<section id="step-3-add-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-add-metadata">Step 3: Add Metadata</h2>
+<p>Fill in the metadata fields according to the prompts in the template. A few notes:</p>
+<ul>
+<li><strong>Title.</strong> Use the full title of your paper exactly as it appears (or will appear) in the <em>RFS</em> and place it without quotation marks after “Replication Package for:”.</li>
+<li><strong>Authors.</strong> Add all coauthors in the same order as on the paper. Include affiliations and, where possible, ORCID identifiers — these improve discoverability and link the dataset cleanly to author profiles.</li>
+<li><strong>Description.</strong> A short paragraph describing the contents of the replication package.</li>
+<li><strong>Subject.</strong> Most RFS authors select <strong>Business and Management</strong>. Additional subjects can be added if they apply.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/dataverse-metadata.png" class="img-fluid figure-img"></p>
+<figcaption>Add metadata to a dataset</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-4-set-the-citation" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-set-the-citation">Step 4: Set the Citation</h2>
+<p>For the <strong>Related Publication</strong> / citation field, simply enter:</p>
+<blockquote class="blockquote">
+<p>Forthcoming, <em>Review of Financial Studies</em>.</p>
+</blockquote>
+<p>Once the paper appears online, the RFS admins will update the citation to include the full reference and a link to the published article. You do not need to revisit this field yourself.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/dataverse-citation.png" class="img-fluid figure-img"></p>
+<figcaption>Update the citation of the dataset</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-5-upload-files" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-upload-files">Step 5: Upload Files</h2>
+<p>You can upload files via drag-and-drop or by clicking <strong>Select Files to Add</strong>. A few practical recommendations:</p>
+<ul>
+<li><strong>Single archive vs.&nbsp;individual files.</strong> Many authors upload one ZIP archive containing the full replication package; uploading files individually is also fine. A single archive is often easier to navigate during review, especially for packages with many small files.</li>
+<li><strong>Use ZIP, not RAR.</strong> RAR is not natively supported across all operating systems and complicates review.</li>
+<li><strong>File-size limits.</strong> If you hit the per-file size limit, please contact the Data Editors before splitting files arbitrarily. Large datasets can usually be reduced significantly by:
+<ul>
+<li>converting CSV to a columnar format such as <strong>Parquet</strong>;</li>
+<li>dropping variables or observations that are not used anywhere in the paper;</li>
+<li>storing intermediate objects (e.g.&nbsp;cached estimation results) outside the package and regenerating them from the code.</li>
+</ul></li>
+<li><strong>Sensitive or proprietary data.</strong> If your data cannot be redistributed (e.g.&nbsp;WRDS, CRSP, or other vendor data subject to licensing), upload only pseudo-data that mirrors the structure of the original data but not their statistical properties. Do not upload restricted data.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/dataverse-upload.png" class="img-fluid figure-img"></p>
+<figcaption>Upload files to the dataset</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-6-save-and-submit-for-review" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-save-and-submit-for-review">Step 6: Save and Submit for Review</h2>
+<p>After clicking <strong>Save Dataset</strong>, you will be taken to the dataset landing page, which shows the current draft state of your replication materials.</p>
+<p>When everything looks right, click <strong>Submit for Review</strong> (the button may also appear as <strong>Publish</strong>, depending on your permissions). The Data Editors receive an automatic notification and will follow up with you shortly.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Submitting for review is not the same as publishing the dataset.</strong> Your materials remain private until the Data Editor process is complete. Public release happens only after we confirm that the package complies with the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/">Code and Data Sharing Policy</a>.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/dataverse-submit.png" class="img-fluid figure-img"></p>
+<figcaption>Submit your replication materials for review</figcaption>
+</figure>
+</div>
+</section>
+<section id="getting-help" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help">Getting Help</h2>
+<p>If anything is unclear or you run into problems — uploads failing, metadata fields you are unsure about, file-size limits, restricted data — please reach out to the RFS Data Editors before pushing through. We would much rather answer a quick question up front than untangle a misfiled submission later.</p>
 
 
 </section>
