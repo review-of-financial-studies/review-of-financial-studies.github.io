@@ -58,8 +58,22 @@
   {
     "objectID": "readme.html",
     "href": "readme.html",
-    "title": "README Checklist",
+    "title": "README",
     "section": "",
-    "text": "Use this interactive checklist to ensure your README is complete, or download our review prompt to get detailed feedback from the LLM of your choice.\n  \n\n  \n    \n      \n    \n    0 of 0 items addressed\n  \n\n  \n\n  \n    \n      \n        0%\n        Complete\n      \n      \n        0\n        Items Checked\n      \n      \n        0\n        Remaining\n      \n    \n    \n    \n      Want a second opinion? Download our review prompt to check your README with the LLM of your choice.\n    \n  \n\n  \n    Template adapted from the Social Science Data Editors' README template"
+    "text": "Important\n\n\n\nThe DE will enforce the template README because consistent adherence dramatically speeds up the review process."
+  },
+  {
+    "objectID": "readme.html#review-prompt",
+    "href": "readme.html#review-prompt",
+    "title": "README",
+    "section": "Review prompt",
+    "text": "Review prompt\nUnfold the prompt below and copy it to use with the LLM of your choice for detailed feedback on your README. Be aware that LLMs like Claude or ChatGPT will rarely tell you your README is fine as-is. They tend to suggest changes whether or not changes are needed. Use your judgment to decide which suggestions are worth acting on.\n\n  \n    \n      ▶\n      View README review prompt\n    \n    \n      \n        Copy to clipboard\n      \n      Loading prompt…"
+  },
+  {
+    "objectID": "readme.html#interactive-checklist",
+    "href": "readme.html#interactive-checklist",
+    "title": "README",
+    "section": "Interactive checklist",
+    "text": "Interactive checklist\nUse this interactive checklist to ensure your README is complete.\n\n  \n    \n      \n    \n    0 of 0 items addressed\n  \n\n  \n\n  \n    \n      \n        0%\n        Complete\n      \n      \n        0\n        Items Checked\n      \n      \n        0\n        Remaining\n      \n    \n    \n  \n\n  \n    Template adapted from the Social Science Data Editors' README template"
   }
 ]
