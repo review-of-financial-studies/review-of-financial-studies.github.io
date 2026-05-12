@@ -6,7 +6,7 @@ format:
 ---
 
 ::: {.callout-important}
-The DE will enforce the template README because consistent adherence dramatically speeds up the review process.
+The DE will enforce the [template README](https://social-science-data-editors.github.io/template_README/) because consistent adherence dramatically speeds up the review process.
 :::
 
 ## Review prompt
