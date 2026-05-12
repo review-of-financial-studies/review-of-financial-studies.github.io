@@ -24,3 +24,5 @@ format:
     css: assets/css/styles.css
     toc: true
     email-obfuscation: javascript
+    resources: 
+      - "assets/prompts/*.txt"
