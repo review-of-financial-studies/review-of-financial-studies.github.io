@@ -63,10 +63,10 @@ Beyond these general requirements, the topics summarized below frequently arise 
 
 ## Further Information
 
-- The DE maintain a list of common questions in the [FAQs](faqs.qmd).
-- The DE also provide detailed guidance on [licensing and recommended practices](license.qmd).
-- The DE will enforce the content of the [template README](https://social-science-data-editors.github.io/template_README/). 
-- The DE maintain a [README Checklist](readme.qmd) that walks through all required elements with best-practice examples
+- A list of common questions is maintained in the [FAQs](faqs.qmd).
+- The [README prompt and checklist](readme.qmd) walk through all required elements with best-practice examples.
+- Recommended practices on [licensing](license.qmd) is also available.
+- A step-by-step guide explains how to upload replication packages to the [RFS Dataverse](dataverse.qmd).
 
 ## Contact
 
