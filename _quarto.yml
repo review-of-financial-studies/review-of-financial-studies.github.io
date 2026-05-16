@@ -16,6 +16,8 @@ website:
         href: readme.qmd
       - text: "License"
         href: license.qmd
+      - text: "RFS Dataverse"
+        href: dataverse.qmd
 
 format:
   html:
