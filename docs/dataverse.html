@@ -195,7 +195,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Do not select “New Dataverse”.</strong> A Dataverse is a <em>collection</em> of datasets — choosing this option creates a separate, parallel space that has nothing to do with the RFS and over which the RFS Data Editors have no administrative control. We cannot delete or move stray Dataverses on your behalf; you would need to contact Harvard Dataverse general support directly.</p>
+<p><strong>Do not select “New Dataverse”.</strong> A Dataverse is a <em>collection</em> of datasets — choosing this option creates a separate, parallel space that has nothing to do with the RFS and over which the RFS Data Editors have no administrative control. We cannot delete or move stray Dataverses on your behalf. You would need to contact Harvard Dataverse general support directly.</p>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -209,8 +209,8 @@ Warning
 <h2 class="anchored" data-anchor-id="step-2-select-the-host-dataverse-and-template">Step 2: Select the Host Dataverse and Template</h2>
 <p>Two fields on the new-dataset form deserve special attention:</p>
 <ul>
-<li><strong>Host Dataverse.</strong> This <em>must</em> be set to <strong>Review of Financial Studies Dataverse</strong>. If you accidentally submit to the general Harvard Dataverse, the RFS Data Editors cannot access or review your materials. Harvard Dataverse staff can in principle move datasets between collections after the fact, but the process is cumbersome and error-prone — please avoid it.</li>
-<li><strong>Dataset Template.</strong> Select the RFS template. It pre-fills several fields and includes inline hints that mirror the guidance on this page.</li>
+<li><strong>Host Dataverse.</strong> This <em>must</em> be set to <strong>Review of Financial Studies Dataverse</strong>. If you accidentally submit to the general Harvard Dataverse, the RFS Data Editors cannot access or review your materials. Harvard Dataverse staff can in principle move datasets between collections after the fact, but the process is cumbersome and error-prone. Please avoid it.</li>
+<li><strong>Dataset Template.</strong> Select the RFS template. It pre-fills some fields and includes inline hints that mirror the guidance on this page.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -224,8 +224,8 @@ Warning
 <p>Fill in the metadata fields according to the prompts in the template. A few notes:</p>
 <ul>
 <li><strong>Title.</strong> Use the full title of your paper exactly as it appears (or will appear) in the <em>RFS</em> and place it without quotation marks after “Replication Package for:”.</li>
-<li><strong>Authors.</strong> Add all coauthors in the same order as on the paper. Include affiliations and, where possible, ORCID identifiers — these improve discoverability and link the dataset cleanly to author profiles.</li>
-<li><strong>Description.</strong> A short paragraph describing the contents of the replication package.</li>
+<li><strong>Authors.</strong> Add all coauthors in the same order as on the paper. Include affiliations and, where possible, ORCID identifiers. Tthese improve discoverability and link the dataset cleanly to author profiles.</li>
+<li><strong>Description.</strong> A few sentences describing the contents of the replication package.</li>
 <li><strong>Subject.</strong> Most RFS authors select <strong>Business and Management</strong>. Additional subjects can be added if they apply.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -239,7 +239,7 @@ Warning
 <h2 class="anchored" data-anchor-id="step-4-set-the-citation">Step 4: Set the Citation</h2>
 <p>For the <strong>Related Publication</strong> / citation field, simply enter:</p>
 <blockquote class="blockquote">
-<p>Forthcoming, <em>Review of Financial Studies</em>.</p>
+<p>Forthcoming, Review of Financial Studies.</p>
 </blockquote>
 <p>Once the paper appears online, the RFS admins will update the citation to include the full reference and a link to the published article. You do not need to revisit this field yourself.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -254,14 +254,14 @@ Warning
 <p>You can upload files via drag-and-drop or by clicking <strong>Select Files to Add</strong>. A few practical recommendations:</p>
 <ul>
 <li><strong>Single archive vs.&nbsp;individual files.</strong> Many authors upload one ZIP archive containing the full replication package; uploading files individually is also fine. A single archive is often easier to navigate during review, especially for packages with many small files.</li>
-<li><strong>Use ZIP, not RAR.</strong> RAR is not natively supported across all operating systems and complicates review.</li>
+<li><strong>Use ZIP, not RAR.</strong> RAR is not natively supported across all operating systems and complicates the life of the Data Editors and replicators.</li>
 <li><strong>File-size limits.</strong> If you hit the per-file size limit, please contact the Data Editors before splitting files arbitrarily. Large datasets can usually be reduced significantly by:
 <ul>
-<li>converting CSV to a columnar format such as <strong>Parquet</strong>;</li>
-<li>dropping variables or observations that are not used anywhere in the paper;</li>
+<li>converting inefficient formats such as CSV to a columnar format such as Parquet;</li>
+<li>dropping variables or observations that are not used anywhere in the code;</li>
 <li>storing intermediate objects (e.g.&nbsp;cached estimation results) outside the package and regenerating them from the code.</li>
 </ul></li>
-<li><strong>Sensitive or proprietary data.</strong> If your data cannot be redistributed (e.g.&nbsp;WRDS, CRSP, or other vendor data subject to licensing), upload only pseudo-data that mirrors the structure of the original data but not their statistical properties. Do not upload restricted data.</li>
+<li><strong>Sensitive or proprietary data.</strong> If your data cannot be redistributed (e.g.&nbsp;WRDS, CRSP, or other vendor data subject to licensing), upload only pseudo-data that mirrors the structure of the original data but not their statistical properties. Many authors choose to include a reschuffeld subsample of the data. Do not upload restricted data.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -284,7 +284,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Submitting for review is not the same as publishing the dataset.</strong> Your materials remain private until the Data Editor process is complete. Public release happens only after we confirm that the package complies with the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/">Code and Data Sharing Policy</a>.</p>
+<p><strong>Submitting for review is not the same as publishing the dataset.</strong> Your materials remain private until the Data Editor process is complete. Public release happens only after we confirm that the package complies with the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/">Code and Data Sharing Policy</a>. If your materials are immediately publicly accessible, then you have not selected the RFS Dataverse as the host (see step 2).</p>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -296,7 +296,7 @@ Note
 </section>
 <section id="getting-help" class="level2">
 <h2 class="anchored" data-anchor-id="getting-help">Getting Help</h2>
-<p>If anything is unclear or you run into problems — uploads failing, metadata fields you are unsure about, file-size limits, restricted data — please reach out to the RFS Data Editors before pushing through. We would much rather answer a quick question up front than untangle a misfiled submission later.</p>
+<p>If anything is unclear or you run into problems (e.g., uploads failing, metadata fields you are unsure about, file-size limits, restricted data), please reach out to the RFS Data Editors before pushing through. We would much rather answer a quick question up front than untangle a misfiled submission later.</p>
 
 
 </section>
