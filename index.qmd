@@ -7,48 +7,46 @@ This website provides key information about the [**Code and Data Sharing Policy*
 
 ## Process
 
-The diagram below illustrates how authors interact with the CDSP and the RFS *Data Editors* (DE) throughout the editorial process.
+The diagram below illustrates how <span style="color:#a07000;font-weight:600;">authors (yellow)</span>, <span style="color:#1b3f66;font-weight:600;">editors</span>, and <span style="color:#2d6a2d;font-weight:600;">data editors (DE)</span> interact throughout the editorial process.
 
-```{mermaid}
-%%{init: {"themeVariables": { "fontSize": "24px"}}}%%
-flowchart LR
-    subgraph Editors["**Editors**"]
-        A[Submission]
-        B[Revisions]
-        C["Conditional Accept"]
-        D[Accept]
-    end
+![](assets/img/process.svg){fig-alt="RFS Data Editor process diagram with four phases — Preparation, Review, Verification, and Release — and steps color-coded by responsibility (editor in blue, data editor in green, author in yellow)." fig-align="center"}
 
-    subgraph DataEditors["**Data Editors**"]
-        E[Onboarding]
-        F[Review]
-        G[Report]
-    end
+The data editor process unfolds in four phases following conditional acceptance.
 
-    A --> B --> C
-    C -.-> D
+- **Preparation**: All conditionally accepted manuscripts enter the data editing process. A DE first assesses whether a CDSP review is required. If a review is needed, the DE contacts the corresponding author with onboarding instructions; otherwise, the handling editor is notified directly. Authors then prepare a replication package intended for eventual public release, substituting any non-public data with pseudo or synthetic equivalents. To help authors prepare a comprehensive README, the DE provide a [README prompt and checklist](readme.qmd) that walks through all required elements with best-practice examples. For other issues that arise during onboarding, please consult the [FAQs](faqs.qmd).
+- **Review**: Authors submit the prepared package via the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs), where it remains private throughout the review. The DE configures a secure, dedicated virtual environment on Nuvolos following the [README](https://social-science-data-editors.github.io/template_README/) and verifies that the code executes successfully against the pseudo data. If issues arise (e.g., execution errors, missing files, incomplete documentation), the DE sends requests to the authors, who revise and resubmit. This cycle continues until the code runs cleanly and the documentation is complete.
+- **Verification**: Once the code runs successfully on pseudo data, the DE invites the authors into the secure environment to upload any raw data that cannot be shared publicly. The DE then executes the code against the original data and verifies that the reproduced results match those reported in the submission. If the original raw data cannot be provided for the verification, authors should reach out to the DE. 
+- **Release**: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision. Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained. Authors then upload the resubmitted final version of the manuscript to Editorial Express. After final acceptance and publication, the DE may also host the verified code and accompanying report in a public GitHub repository under the [RFS organization](https://github.com/review-of-financial-studies).
 
-    C --> E --> F --> G --> D
+Requests for exemption from the CDSP must be made at the time of *initial* submission — see the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/).
 
-    style A fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style E fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style F fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style G fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style D fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-```
+### Start From a Project Template
 
-- **Submission**: Please read the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/). Any requests for exemption from the CDSP must be made at the time of initial submission.
-- **Onboarding**: All conditionally accepted manuscripts enter the data editing process. At this point, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified. For common issues that arise during onboarding, please consult the [FAQs](faqs.qmd).
-- **Review**: Authors must prepare a replication package that complies with the CDSP and submit it via the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). The package should be prepared for eventual public release and, therefore, must include pseudo or synthetic data in place of any non-public data. To help authors prepare a comprehensive README, the DE provide a [README Checklist](readme.qmd) that walks through all required elements with best-practice examples. During the review phase, the package will remain private. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
-  1. The DE configures a secure, dedicated virtual environment for the authors, based on the instructions in the [README](https://social-science-data-editors.github.io/template_README/).
-  2. The DE verifies that the code executes successfully in this environment using the provided materials and may request revisions from the authors.
-  3. Once the code runs successfully, the DE invites the authors to the environment to upload all required raw data that cannot be shared publicly.
-  4. The DE verifies that the results reproduced in the authors' environment match those reported in the submission.
-  5. Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained.
-- **Report**: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision.
-- **Accept**: The editor will then decide on the resubmitted final version of the manuscript. Upon final acceptance, authors may refer to their published replication package in the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs). At a later stage, the DE may choose to host the verified code and accompanying report in a public GitHub repository under the [RFS organization](https://github.com/review-of-financial-studies).
+The fastest way to produce a compliant replication package and to avoid the most common issues is to start from one of the project templates we maintain. Each template encodes the recommended practices for its language.
 
-### Common Issues 
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+#### [Stata Template](https://github.com/review-of-financial-studies/template-stata)
+
+Project layout, `setup.do` for environment and `ado` packages, relative forward-slash paths, and a runnable `main.do`.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+#### [Python Template](https://github.com/review-of-financial-studies/template-python)
+
+`uv`-based cross-platform lockfile, project-root execution via `uv run`, and `pathlib`-friendly relative paths.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+#### [R Template](https://github.com/review-of-financial-studies/template-r)
+
+`renv.lock` for environment restoration, a project-root workflow (no `setwd()`), and consistent relative paths.
+:::
+
+:::
+
+### Common Issues
 
 Experience from prior reviews indicates that a limited set of recurring issues accounts for most delays during the data editor process. Many of these delays can be avoided by ensuring that the replication package includes a [README](https://social-science-data-editors.github.io/template_README/) that follows the Social Science Data Editors template (version 1.1) for standardized documentation, as well as a [LICENSE file](license.qmd) that clearly specifies the terms governing the use of the code and data.
 
@@ -59,7 +57,6 @@ Beyond these general requirements, the topics summarized below frequently arise 
 | **Project execution** | Do not use `cd` to change directories within scripts. Launch Stata from the project root (e.g., open `main.do` in the root or use a Stata project file). | Do not use `os.chdir()`. Run code from the project root (e.g., `uv run python main.py` or `runpy.run_path()`), with all paths relative to the root. | Do not use `setwd()`. Run R from the project root (e.g., open the folder directly in RStudio, Positron, or VS Code). |
 | **File paths & portability** | Use relative paths with forward slashes (`/`). Avoid backslashes (`\`), which are Windows-specific. | Use relative paths with forward slashes (`/`) or `pathlib.Path`. Avoid hard-coded absolute paths. | Use relative paths with forward slashes (`/`). Do not rely on escaped backslashes (`\\`). |
 | **Dependency management** | Document the Stata environment and required packages in `setup.do` (`ado`-path included). | Use reproducible, cross-platform lockfiles (e.g., `uv`) rather than `pip freeze`-based `requirements.txt`. | Use `renv.lock` to document and restore the R environment. |
-| **Examples** | [Stata project template](https://github.com/review-of-financial-studies/template-stata) | [Python project template](https://github.com/review-of-financial-studies/template-python) | [R project template](https://github.com/review-of-financial-studies/template-r) |
 
 ## Further Information
 
