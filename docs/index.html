@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8c38fd85d21bfe44b50360969156fb14.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ff38ca5759cea8d2b4e40dc1c167d4da.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This website provides key information about the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/"><strong>Code and Data Sharing Policy</strong></a> (CDSP) and the pre-acceptance reproducibility checks implemented at the <em>Review of Financial Studies</em> (RFS).</p>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
-<p>The diagram below illustrates how <span style="color:#a07000;font-weight:600;">authors (yellow)</span>, <span style="color:#1b3f66;font-weight:600;">editors</span>, and <span style="color:#2d6a2d;font-weight:600;">data editors (DE)</span> interact throughout the editorial process.</p>
+<p>The diagram below illustrates how <span style="color:#a07000;font-weight:600;">authors (yellow)</span>, <span style="color:#1b3f66;font-weight:600;">editors (blue)</span>, and <span style="color:#2d6a2d;font-weight:600;">data editors (DE, green)</span> interact throughout the editorial process.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/img/process.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RFS Data Editor process diagram with four phases — Preparation, Review, Verification, and Release — and steps color-coded by responsibility (editor in blue, data editor in green, author in yellow)."></p>
@@ -172,9 +172,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The data editor process unfolds in four phases following conditional acceptance.</p>
 <ul>
-<li><strong>Preparation</strong>: All conditionally accepted manuscripts enter the data editing process. A DE first assesses whether a CDSP review is required. If a review is needed, the DE contacts the corresponding author with onboarding instructions; otherwise, the handling editor is notified directly. Authors then prepare a replication package intended for eventual public release, substituting any non-public data with pseudo or synthetic equivalents. To help authors prepare a comprehensive README, the DE provide a <a href="./readme.html">README prompt and checklist</a> that walks through all required elements with best-practice examples. For other issues that arise during onboarding, please consult the <a href="./faqs.html">FAQs</a>.</li>
-<li><strong>Review</strong>: Authors submit the prepared package via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>, where it remains private throughout the review. The DE configures a secure, dedicated virtual environment on Nuvolos following the <a href="https://social-science-data-editors.github.io/template_README/">README</a> and verifies that the code executes successfully against the pseudo data. If issues arise (e.g., execution errors, missing files, incomplete documentation), the DE sends requests to the authors, who revise and resubmit. This cycle continues until the code runs cleanly and the documentation is complete.</li>
-<li><strong>Verification</strong>: Once the code runs successfully on pseudo data, the DE invites the authors into the secure environment to upload any raw data that cannot be shared publicly. The DE then executes the code against the original data and verifies that the reproduced results match those reported in the submission. If the original raw data cannot be provided for the verification, authors should reach out to the DE.</li>
+<li><strong>Preparation</strong>: All conditionally accepted manuscripts enter the data editing process. A DE first assesses whether a CDSP review is required. If a review is needed, the DE contacts the corresponding author with onboarding instructions; otherwise, the handling editor is notified directly. Authors then prepare a replication package intended for eventual public release, replacing any non-redistributable data with pseudo or synthetic equivalents. Every package must also include a comprehensive <a href="https://social-science-data-editors.github.io/template_README/">README</a>. To help authors prepare the README, the DE provide a <a href="./readme.html">README prompt and checklist</a> that walks through all required elements with best-practice examples. For other issues that arise during onboarding, please consult the <a href="./faqs.html">FAQs</a>.</li>
+<li><strong>Review</strong>: Authors submit the prepared package via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>, where it remains private throughout the review. The DE configures a secure, dedicated virtual environment on Nuvolos following the submitted README and verifies that the code executes successfully with the pseudo data. If issues arise (e.g., execution errors, missing files, incomplete documentation, etc.), the DE sends requests to the authors, who revise and resubmit via the RFS Dataverse. This cycle continues until the code runs cleanly and the documentation is complete.</li>
+<li><strong>Verification</strong>: Once the code runs successfully on pseudo data, the DE invites the authors into the secure environment to upload any raw data that cannot be shared publicly. The DE then executes the code with the original data and verifies that the code’s output matches the results reported in the submitted manuscript. If the original raw data cannot be provided for verification, authors should reach out to the DE.</li>
 <li><strong>Release</strong>: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision. Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained. Authors then upload the resubmitted final version of the manuscript to Editorial Express. After final acceptance and publication, the DE may also host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
 </ul>
 <p>Requests for exemption from the CDSP must be made at the time of <em>initial</em> submission — see the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>.</p>
