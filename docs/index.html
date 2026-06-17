@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Review of Financial Studies – RFS Data Editors</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,15 +35,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ff38ca5759cea8d2b4e40dc1c167d4da.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,9 +70,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -83,8 +82,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">RFS Data Editors</span>
     </a>
@@ -133,6 +130,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#process" id="toc-process" class="nav-link active" data-scroll-target="#process">Process</a>
   <ul class="collapse">
+  <li><a href="#start-from-a-project-template" id="toc-start-from-a-project-template" class="nav-link" data-scroll-target="#start-from-a-project-template">Start From a Project Template</a></li>
   <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues">Common Issues</a></li>
   </ul></li>
   <li><a href="#further-information" id="toc-further-information" class="nav-link" data-scroll-target="#further-information">Further Information</a></li>
@@ -166,62 +164,49 @@ ul.task-list li input[type="checkbox"] {
 <p>This website provides key information about the <a href="https://sfs.org/review-of-financial-studies/code-sharing-policy/"><strong>Code and Data Sharing Policy</strong></a> (CDSP) and the pre-acceptance reproducibility checks implemented at the <em>Review of Financial Studies</em> (RFS).</p>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
-<p>The diagram below illustrates how authors interact with the CDSP and the RFS <em>Data Editors</em> (DE) throughout the editorial process.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">%%{init: {"themeVariables": { "fontSize": "24px"}}}%%
-flowchart LR
-    subgraph Editors["**Editors**"]
-        A[Submission]
-        B[Revisions]
-        C["Conditional Accept"]
-        D[Accept]
-    end
-
-    subgraph DataEditors["**Data Editors**"]
-        E[Onboarding]
-        F[Review]
-        G[Report]
-    end
-
-    A --&gt; B --&gt; C
-    C -.-&gt; D
-
-    C --&gt; E --&gt; F --&gt; G --&gt; D
-
-    style A fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style E fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style F fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style G fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-    style D fill:#2a6197,stroke:#1b3f66,stroke-width:2px,color:white
-</pre>
+<p>The diagram below illustrates how <span style="color:#a07000;font-weight:600;">authors (yellow)</span>, <span style="color:#1b3f66;font-weight:600;">editors (blue)</span>, and <span style="color:#2d6a2d;font-weight:600;">data editors (DE, green)</span> interact throughout the editorial process.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/process.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RFS Data Editor process diagram with four phases — Preparation, Review, Verification, and Release — and steps color-coded by responsibility (editor in blue, data editor in green, author in yellow)."></p>
+</figure>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<p>The data editor process unfolds in four phases following conditional acceptance.</p>
 <ul>
-<li><strong>Submission</strong>: Please read the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>. Any requests for exemption from the CDSP must be made at the time of initial submission.</li>
-<li><strong>Onboarding</strong>: All conditionally accepted manuscripts enter the data editing process. At this point, a DE will assess whether a CDSP review is required. If a review is needed, the DE will contact the corresponding author with further instructions. Otherwise, the handling editor will be notified. For common issues that arise during onboarding, please consult the <a href="./faqs.html">FAQs</a>.</li>
-<li><strong>Review</strong>: Authors must prepare a replication package that complies with the CDSP and submit it via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. The package should be prepared for eventual public release and, therefore, must include pseudo or synthetic data in place of any non-public data. To help authors prepare a comprehensive README, the DE provide a <a href="./readme.html">README Checklist</a> that walks through all required elements with best-practice examples. During the review phase, the package will remain private. Any issues encountered (e.g., execution errors or output discrepancies) will be resolved directly between the DE and the authors. The review process typically involves the following steps:
-<ol type="1">
-<li>The DE configures a secure, dedicated virtual environment for the authors, based on the instructions in the <a href="https://social-science-data-editors.github.io/template_README/">README</a>.</li>
-<li>The DE verifies that the code executes successfully in this environment using the provided materials and may request revisions from the authors.</li>
-<li>Once the code runs successfully, the DE invites the authors to the environment to upload all required raw data that cannot be shared publicly.</li>
-<li>The DE verifies that the results reproduced in the authors’ environment match those reported in the submission.</li>
-<li>Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained.</li>
-</ol></li>
-<li><strong>Report</strong>: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision.</li>
-<li><strong>Accept</strong>: The editor will then decide on the resubmitted final version of the manuscript. Upon final acceptance, authors may refer to their published replication package in the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>. At a later stage, the DE may choose to host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
+<li><strong>Preparation</strong>: All conditionally accepted manuscripts enter the data editing process. A DE first assesses whether a CDSP review is required. If a review is needed, the DE contacts the corresponding author with onboarding instructions; otherwise, the handling editor is notified directly. Authors then prepare a replication package intended for eventual public release, replacing any non-redistributable data with pseudo or synthetic equivalents. Every package must also include a comprehensive <a href="https://social-science-data-editors.github.io/template_README/">README</a>. To help authors prepare the README, the DE provide a <a href="./readme.html">README prompt and checklist</a> that walks through all required elements with best-practice examples. For other issues that arise during onboarding, please consult the <a href="./faqs.html">FAQs</a>.</li>
+<li><strong>Review</strong>: Authors submit the prepared package via the <a href="https://dataverse.harvard.edu/dataverse/rfs">RFS Dataverse</a>, where it remains private throughout the review. The DE configures a secure, dedicated virtual environment on Nuvolos following the submitted README and verifies that the code executes successfully with the pseudo data. If issues arise (e.g., execution errors, missing files, incomplete documentation, etc.), the DE sends requests to the authors, who revise and resubmit via the RFS Dataverse. This cycle continues until the code runs cleanly and the documentation is complete.</li>
+<li><strong>Verification</strong>: Once the code runs successfully on pseudo data, the DE invites the authors into the secure environment to upload any raw data that cannot be shared publicly. The DE then executes the code with the original data and verifies that the code’s output matches the results reported in the submitted manuscript. If the original raw data cannot be provided for verification, authors should reach out to the DE.</li>
+<li><strong>Release</strong>: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision. Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained. Authors then upload the resubmitted final version of the manuscript to Editorial Express. After final acceptance and publication, the DE may also host the verified code and accompanying report in a public GitHub repository under the <a href="https://github.com/review-of-financial-studies">RFS organization</a>.</li>
 </ul>
+<p>Requests for exemption from the CDSP must be made at the time of <em>initial</em> submission — see the <a href="https://sfs.org/guidelines-for-submissions/">Guidelines for Submission</a>.</p>
+<section id="start-from-a-project-template" class="level3">
+<h3 class="anchored" data-anchor-id="start-from-a-project-template">Start From a Project Template</h3>
+<p>The fastest way to produce a compliant replication package and to avoid the most common issues is to start from one of the project templates we maintain. Each template encodes the recommended practices for its language.</p>
+<div class="grid">
+<section id="stata-template" class="level4 g-col-12 g-col-md-4">
+<h4 class="anchored" data-anchor-id="stata-template"><a href="https://github.com/review-of-financial-studies/template-stata">Stata Template</a></h4>
+<p>Project layout, <code>setup.do</code> for environment and <code>ado</code> packages, relative forward-slash paths, and a runnable <code>main.do</code>.</p>
+</section>
+<section id="python-template" class="level4 g-col-12 g-col-md-4">
+<h4 class="anchored" data-anchor-id="python-template"><a href="https://github.com/review-of-financial-studies/template-python">Python Template</a></h4>
+<p><code>uv</code>-based cross-platform lockfile, project-root execution via <code>uv run</code>, and <code>pathlib</code>-friendly relative paths.</p>
+</section>
+<section id="r-template" class="level4 g-col-12 g-col-md-4">
+<h4 class="anchored" data-anchor-id="r-template"><a href="https://github.com/review-of-financial-studies/template-r">R Template</a></h4>
+<p><code>renv.lock</code> for environment restoration, a project-root workflow (no <code>setwd()</code>), and consistent relative paths.</p>
+</section>
+</div>
+</section>
 <section id="common-issues" class="level3">
 <h3 class="anchored" data-anchor-id="common-issues">Common Issues</h3>
 <p>Experience from prior reviews indicates that a limited set of recurring issues accounts for most delays during the data editor process. Many of these delays can be avoided by ensuring that the replication package includes a <a href="https://social-science-data-editors.github.io/template_README/">README</a> that follows the Social Science Data Editors template (version 1.1) for standardized documentation, as well as a <a href="./license.html">LICENSE file</a> that clearly specifies the terms governing the use of the code and data.</p>
 <p>Beyond these general requirements, the topics summarized below frequently arise during review and should ideally be addressed prior to submission:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 29%">
+<col style="width: 33%">
+<col style="width: 12%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Topic</th>
@@ -248,12 +233,6 @@ flowchart LR
 <td>Document the Stata environment and required packages in <code>setup.do</code> (<code>ado</code>-path included).</td>
 <td>Use reproducible, cross-platform lockfiles (e.g., <code>uv</code>) rather than <code>pip freeze</code>-based <code>requirements.txt</code>.</td>
 <td>Use <code>renv.lock</code> to document and restore the R environment.</td>
-</tr>
-<tr class="even">
-<td><strong>Examples</strong></td>
-<td><a href="https://github.com/review-of-financial-studies/template-stata">Stata project template</a></td>
-<td><a href="https://github.com/review-of-financial-studies/template-python">Python project template</a></td>
-<td><a href="https://github.com/review-of-financial-studies/template-r">R project template</a></td>
 </tr>
 </tbody>
 </table>
