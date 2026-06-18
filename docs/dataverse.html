@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,13 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ff38ca5759cea8d2b4e40dc1c167d4da.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8c38fd85d21bfe44b50360969156fb14.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -200,7 +203,7 @@ Warning
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/dataverse-create.png" class="img-fluid figure-img"></p>
+<p><a href="assets/img/dataverse-create.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Create a new dataset in the RFS Dataverse"><img src="assets/img/dataverse-create.png" class="img-fluid figure-img" alt="Create a new dataset in the RFS Dataverse"></a></p>
 <figcaption>Create a new dataset in the RFS Dataverse</figcaption>
 </figure>
 </div>
@@ -214,7 +217,7 @@ Warning
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/dataverse-host.png" class="img-fluid figure-img"></p>
+<p><a href="assets/img/dataverse-host.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Select the correct host and template for the dataset"><img src="assets/img/dataverse-host.png" class="img-fluid figure-img" alt="Select the correct host and template for the dataset"></a></p>
 <figcaption>Select the correct host and template for the dataset</figcaption>
 </figure>
 </div>
@@ -230,7 +233,7 @@ Warning
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/dataverse-metadata.png" class="img-fluid figure-img"></p>
+<p><a href="assets/img/dataverse-metadata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Add metadata to a dataset"><img src="assets/img/dataverse-metadata.png" class="img-fluid figure-img" alt="Add metadata to a dataset"></a></p>
 <figcaption>Add metadata to a dataset</figcaption>
 </figure>
 </div>
@@ -244,7 +247,7 @@ Warning
 <p>Once the paper appears online, the RFS admins will update the citation to include the full reference and a link to the published article. You do not need to revisit this field yourself.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/dataverse-citation.png" class="img-fluid figure-img"></p>
+<p><a href="assets/img/dataverse-citation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Update the citation of the dataset"><img src="assets/img/dataverse-citation.png" class="img-fluid figure-img" alt="Update the citation of the dataset"></a></p>
 <figcaption>Update the citation of the dataset</figcaption>
 </figure>
 </div>
@@ -265,7 +268,7 @@ Warning
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/dataverse-upload.png" class="img-fluid figure-img"></p>
+<p><a href="assets/img/dataverse-upload.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Upload files to the dataset"><img src="assets/img/dataverse-upload.png" class="img-fluid figure-img" alt="Upload files to the dataset"></a></p>
 <figcaption>Upload files to the dataset</figcaption>
 </figure>
 </div>
@@ -289,7 +292,7 @@ Note
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/img/dataverse-submit.png" class="img-fluid figure-img"></p>
+<p><a href="assets/img/dataverse-submit.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Submit your replication materials for review"><img src="assets/img/dataverse-submit.png" class="img-fluid figure-img" alt="Submit your replication materials for review"></a></p>
 <figcaption>Submit your replication materials for review</figcaption>
 </figure>
 </div>
@@ -703,6 +706,38 @@ Note
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

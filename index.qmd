@@ -9,7 +9,7 @@ This website provides key information about the [**Code and Data Sharing Policy*
 
 The diagram below illustrates how <span style="color:#a07000;font-weight:600;">authors (yellow)</span>, <span style="color:#1b3f66;font-weight:600;">editors (blue)</span>, and <span style="color:#2d6a2d;font-weight:600;">data editors (DE, green)</span> interact throughout the editorial process.
 
-![](assets/img/process.svg){fig-alt="RFS Data Editor process diagram with four phases — Preparation, Review, Verification, and Release — and steps color-coded by responsibility (editor in blue, data editor in green, author in yellow)." fig-align="center"}
+![](assets/img/process.svg){.lightbox fig-alt="RFS Data Editor process diagram with four phases — Preparation, Review, Verification, and Release — and steps color-coded by responsibility (editor in blue, data editor in green, author in yellow)." fig-align="center" width="60%" title="Click to enlarge"}
 
 The data editor process unfolds in four phases following conditional acceptance.
 

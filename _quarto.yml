@@ -25,6 +25,7 @@ format:
       - cosmo
     css: assets/css/styles.css
     toc: true
+    lightbox: true
     email-obfuscation: javascript
     resources: 
       - "assets/prompts/*.txt"
