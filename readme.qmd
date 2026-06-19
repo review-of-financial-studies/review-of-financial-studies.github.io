@@ -357,14 +357,24 @@ No pseudo-random number generator is used in the analysis.`
 Approximate time needed to reproduce the analyses on a scientific computing cluster with 200 cores: 4 days. In particular, programs/monte_carlo.py takes 90% of the computing time.`
         },
         {
-          text: "How much disk space is required in total?",
-          label: "My README includes estimated storage space requirements.",
-          example: `Approximate storage space needed: 25 MB - 250 MB`
+          text: "How much disk space (storage) is required, separately for the pseudo-data run and the original data run?",
+          label: "My README includes estimated storage requirements for both the pseudo-data and original data runs.",
+          example: `Approximate storage space needed for the pseudo-data run: 25 MB - 250 MB.
+
+<span class="or-divider">— and —</span>
+
+Approximate storage space needed for the original data run: 5 GB - 50 GB.`
         },
         {
-          text: "On what type of machine was the code last run?",
-          label: "My README includes information about the computing environment.",
-          example: `The code was last run on a 4-core laptop running macOS 14 with 16GB RAM and approximately 50GB of free disk space.`
+          text: "What are the memory (RAM) and CPU requirements, separately for the pseudo-data run and the original data run, and on what type of machine was the code last run?",
+          label: "My README includes memory and CPU requirements for both the pseudo-data and original data runs, and describes the machine used.",
+          example: `The code was last run on a 4-core laptop running macOS 14 with 16 GB RAM and approximately 50 GB of free disk space.
+
+Pseudo-data run: 2 CPU cores and 8 GB RAM.
+
+<span class="or-divider">— and —</span>
+
+Original data run: 16 CPU cores and 64 GB RAM.`
         },
         {
           text: "Does your code use forward slashes for file paths to ensure the package works across operating systems?",

@@ -202,7 +202,8 @@ or
 - Is there an automated setup or dependency installation script?
 - Is randomness used, and if so, is it controlled (e.g., seeds)?
 - Is runtime stated, and is the machine context clear?
-- Is required disk space estimated?
+- Is required disk space (storage) estimated separately for the pseudo-data run and the original data run?
+- Are memory (RAM) and CPU requirements stated separately for the pseudo-data run and the original data run?
 - Is the machine used for last execution described?
 - Are file paths OS-agnostic (e.g., forward slashes) and relative to the project root?
 
@@ -240,9 +241,17 @@ or
 
 > Approximate time needed to reproduce the analyses on a scientific computing cluster with 200 cores: 4 days. In particular, `programs/monte_carlo.py` takes 90% of the computing time.
 
-*Disk space:*
+*Disk space (storage):*
 
-> Approximate storage space needed: 25 MB – 250 MB.
+> Approximate storage space needed for the pseudo-data run: 25 MB – 250 MB.
+>
+> Approximate storage space needed for the original data run: 5 GB – 50 GB.
+
+*Memory and CPU:*
+
+> Pseudo-data run: 2 CPU cores and 8 GB RAM.
+>
+> Original data run: 16 CPU cores and 64 GB RAM.
 
 *Machine description:*
 
