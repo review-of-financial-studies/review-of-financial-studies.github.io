@@ -46,7 +46,6 @@ Or, when licensed data cannot be shared:
 **Questions to check:**
 - Does the README clearly state whether external (non-simulated) data are used?
 - Is there an explicit data rights statement?
-- Do the authors state whether they have the legal right to use and/or redistribute the data?
 - Is the data license specified where relevant?
 - Is the overall public availability status of the data clearly categorized?
 
@@ -73,17 +72,9 @@ or
 
 > I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
 
-or
+and
 
 > I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package.
-
-*Legal rights confirmation:*
-
-> The authors have legitimate access to all data used in this manuscript.
-
-or
-
-> The authors have permission to redistribute the data included in this replication package.
 
 *Data license:*
 
@@ -211,7 +202,15 @@ or
 
 *Software and packages:*
 
-> The code was last run using Stata 18 MP. The required user-written packages are `estout` and `reghdfe`. All packages are included in the `ado` directory.
+> The code was last run using Stata 18 MP. The required user-written packages are `estout` (v3.31), `reghdfe` (v6.12.3), `ftools` (v2.49.1), and `require` (v1.0.4). `ftools` and `require` are dependencies of `reghdfe`. All packages are included in the `ado` directory.
+
+or
+
+> The code was last run using Python 3.12. All required packages and their exact versions are recorded in `pyproject.toml` and `uv.lock`.
+
+or
+
+> The code was last run using R 4.4.1. All required packages and their exact versions are recorded in `renv.lock`.
 
 *Setup script:*
 
@@ -219,7 +218,11 @@ or
 
 or
 
-> Various Python packages recorded in the `pyproject.toml` and `uv.lock`. By running `uv sync`, the required packages and their versions are installed.
+> By running `uv sync`, the required packages and their versions are installed.
+
+or
+
+> By running `renv::restore()`, the required packages and their versions are installed.
 
 *Random number generation:*
 

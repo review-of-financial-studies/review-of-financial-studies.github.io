@@ -206,18 +206,7 @@ All data are publicly available and downloaded automatically by the replication 
           label: "My README includes a rights statement.",
           example: `I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
 
-<span class="or-divider">— or —</span>
-
 I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package.`
-        },
-        {
-          text: "Do you have the legal right to use and redistribute the data?",
-          label: "I confirm legal rights for data use and redistribution.",
-          example: `The authors have legitimate access to all data used in this manuscript.
-
-<span class="or-divider">— or —</span>
-
-The authors have permission to redistribute the data included in this replication package.`
         },
         {
           text: "Under what license are the data distributed?",
@@ -323,7 +312,15 @@ A full codebook that describes each variable and table is provided in codebook.x
         {
           text: "What software is required, and do you include versions and packages?",
           label: "My README includes detailed software requirements.",
-          example: `The code was last run using Stata 18 MP. The required user-written packages are estout and reghdfe. All packages are included in the ado directory.`
+          example: `The code was last run using Stata 18 MP. The required user-written packages are estout (v3.31), reghdfe (v6.12.3), ftools (v2.49.1), and require (v1.0.4). ftools and require are dependencies of reghdfe. All packages are included in the ado directory.
+
+<span class="or-divider">— or —</span>
+
+The code was last run using Python 3.12. All required packages and their exact versions are recorded in pyproject.toml and uv.lock.
+
+<span class="or-divider">— or —</span>
+
+The code was last run using R 4.4.1. All required packages and their exact versions are recorded in renv.lock.`
         },
         {
           text: "Is there an automated setup or dependency installation script?",
@@ -332,7 +329,11 @@ A full codebook that describes each variable and table is provided in codebook.x
 
 <span class="or-divider">— or —</span>
 
-Various Python packages recorded in the pyproject.toml and uv.lock. By running uv sync, the required packages and their versions are installed.`
+By running uv sync, the required packages and their versions are installed.
+
+<span class="or-divider">— or —</span>
+
+By running renv::restore(), the required packages and their versions are installed.`
         },
         {
           text: "Does the analysis rely on randomness, and if so, how is it controlled?",
