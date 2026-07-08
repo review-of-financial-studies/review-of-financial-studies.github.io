@@ -206,18 +206,7 @@ All data are publicly available and downloaded automatically by the replication 
           label: "My README includes a rights statement.",
           example: `I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
 
-<span class="or-divider">— or —</span>
-
 I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package.`
-        },
-        {
-          text: "Do you have the legal right to use and redistribute the data?",
-          label: "I confirm legal rights for data use and redistribution.",
-          example: `The authors have legitimate access to all data used in this manuscript.
-
-<span class="or-divider">— or —</span>
-
-The authors have permission to redistribute the data included in this replication package.`
         },
         {
           text: "Under what license are the data distributed?",
@@ -323,7 +312,15 @@ A full codebook that describes each variable and table is provided in codebook.x
         {
           text: "What software is required, and do you include versions and packages?",
           label: "My README includes detailed software requirements.",
-          example: `The code was last run using Stata 18 MP. The required user-written packages are estout and reghdfe. All packages are included in the ado directory.`
+          example: `The code was last run using Stata 18 MP. The required user-written packages are estout (v3.31), reghdfe (v6.12.3), ftools (v2.49.1), and require (v1.0.4). ftools and require are dependencies of reghdfe. All packages are included in the ado directory.
+
+<span class="or-divider">— or —</span>
+
+The code was last run using Python 3.12. All required packages and their exact versions are recorded in pyproject.toml and uv.lock.
+
+<span class="or-divider">— or —</span>
+
+The code was last run using R 4.4.1. All required packages and their exact versions are recorded in renv.lock.`
         },
         {
           text: "Is there an automated setup or dependency installation script?",
@@ -332,7 +329,11 @@ A full codebook that describes each variable and table is provided in codebook.x
 
 <span class="or-divider">— or —</span>
 
-Various Python packages recorded in the pyproject.toml and uv.lock. By running uv sync, the required packages and their versions are installed.`
+By running uv sync, the required packages and their versions are installed.
+
+<span class="or-divider">— or —</span>
+
+By running renv::restore(), the required packages and their versions are installed.`
         },
         {
           text: "Does the analysis rely on randomness, and if so, how is it controlled?",
@@ -357,14 +358,24 @@ No pseudo-random number generator is used in the analysis.`
 Approximate time needed to reproduce the analyses on a scientific computing cluster with 200 cores: 4 days. In particular, programs/monte_carlo.py takes 90% of the computing time.`
         },
         {
-          text: "How much disk space is required in total?",
-          label: "My README includes estimated storage space requirements.",
-          example: `Approximate storage space needed: 25 MB - 250 MB`
+          text: "How much disk space (storage) is required, separately for the pseudo-data run and the original data run?",
+          label: "My README includes estimated storage requirements for both the pseudo-data and original data runs.",
+          example: `Approximate storage space needed for the pseudo-data run: 25 MB - 250 MB.
+
+<span class="or-divider">— and —</span>
+
+Approximate storage space needed for the original data run: 5 GB - 50 GB.`
         },
         {
-          text: "On what type of machine was the code last run?",
-          label: "My README includes information about the computing environment.",
-          example: `The code was last run on a 4-core laptop running macOS 14 with 16GB RAM and approximately 50GB of free disk space.`
+          text: "What are the memory (RAM) and CPU requirements, separately for the pseudo-data run and the original data run, and on what type of machine was the code last run?",
+          label: "My README includes memory and CPU requirements for both the pseudo-data and original data runs, and describes the machine used.",
+          example: `The code was last run on a 4-core laptop running macOS 14 with 16 GB RAM and approximately 50 GB of free disk space.
+
+Pseudo-data run: 2 CPU cores and 8 GB RAM.
+
+<span class="or-divider">— and —</span>
+
+Original data run: 16 CPU cores and 64 GB RAM.`
         },
         {
           text: "Does your code use forward slashes for file paths to ensure the package works across operating systems?",

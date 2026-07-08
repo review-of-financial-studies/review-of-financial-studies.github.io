@@ -46,7 +46,6 @@ Or, when licensed data cannot be shared:
 **Questions to check:**
 - Does the README clearly state whether external (non-simulated) data are used?
 - Is there an explicit data rights statement?
-- Do the authors state whether they have the legal right to use and/or redistribute the data?
 - Is the data license specified where relevant?
 - Is the overall public availability status of the data clearly categorized?
 
@@ -73,17 +72,9 @@ or
 
 > I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
 
-or
+and
 
 > I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package.
-
-*Legal rights confirmation:*
-
-> The authors have legitimate access to all data used in this manuscript.
-
-or
-
-> The authors have permission to redistribute the data included in this replication package.
 
 *Data license:*
 
@@ -202,7 +193,8 @@ or
 - Is there an automated setup or dependency installation script?
 - Is randomness used, and if so, is it controlled (e.g., seeds)?
 - Is runtime stated, and is the machine context clear?
-- Is required disk space estimated?
+- Is required disk space (storage) estimated separately for the pseudo-data run and the original data run?
+- Are memory (RAM) and CPU requirements stated separately for the pseudo-data run and the original data run?
 - Is the machine used for last execution described?
 - Are file paths OS-agnostic (e.g., forward slashes) and relative to the project root?
 
@@ -210,7 +202,15 @@ or
 
 *Software and packages:*
 
-> The code was last run using Stata 18 MP. The required user-written packages are `estout` and `reghdfe`. All packages are included in the `ado` directory.
+> The code was last run using Stata 18 MP. The required user-written packages are `estout` (v3.31), `reghdfe` (v6.12.3), `ftools` (v2.49.1), and `require` (v1.0.4). `ftools` and `require` are dependencies of `reghdfe`. All packages are included in the `ado` directory.
+
+or
+
+> The code was last run using Python 3.12. All required packages and their exact versions are recorded in `pyproject.toml` and `uv.lock`.
+
+or
+
+> The code was last run using R 4.4.1. All required packages and their exact versions are recorded in `renv.lock`.
 
 *Setup script:*
 
@@ -218,7 +218,11 @@ or
 
 or
 
-> Various Python packages recorded in the `pyproject.toml` and `uv.lock`. By running `uv sync`, the required packages and their versions are installed.
+> By running `uv sync`, the required packages and their versions are installed.
+
+or
+
+> By running `renv::restore()`, the required packages and their versions are installed.
 
 *Random number generation:*
 
@@ -240,9 +244,17 @@ or
 
 > Approximate time needed to reproduce the analyses on a scientific computing cluster with 200 cores: 4 days. In particular, `programs/monte_carlo.py` takes 90% of the computing time.
 
-*Disk space:*
+*Disk space (storage):*
 
-> Approximate storage space needed: 25 MB – 250 MB.
+> Approximate storage space needed for the pseudo-data run: 25 MB – 250 MB.
+>
+> Approximate storage space needed for the original data run: 5 GB – 50 GB.
+
+*Memory and CPU:*
+
+> Pseudo-data run: 2 CPU cores and 8 GB RAM.
+>
+> Original data run: 16 CPU cores and 64 GB RAM.
 
 *Machine description:*
 
