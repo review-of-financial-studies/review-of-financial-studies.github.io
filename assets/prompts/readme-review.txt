@@ -45,7 +45,7 @@ Or, when licensed data cannot be shared:
 
 **Questions to check:**
 - Does the README clearly state whether external (non-simulated) data are used?
-- Is there an explicit data rights statement?
+- Are there explicit data rights statements?
 - Is the data license specified where relevant?
 - Is the overall public availability status of the data clearly categorized?
 
@@ -206,11 +206,11 @@ or
 
 or
 
-> The code was last run using Python 3.12. All required packages and their exact versions are recorded in `pyproject.toml` and `uv.lock`.
+> The code was last run using Python 3.12. The core packages are: polars, plotnine, pyfixest. All dependencies and their exact versions are recorded in `pyproject.toml` and `uv.lock`.
 
 or
 
-> The code was last run using R 4.4.1. All required packages and their exact versions are recorded in `renv.lock`.
+> The code was last run using R 4.4.1. The core packages are: dplyr, ggplot2, fixest. All dependencies and their exact versions are recorded in `renv.lock`.
 
 *Setup script:*
 
