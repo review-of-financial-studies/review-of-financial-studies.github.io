@@ -67,7 +67,7 @@
     "href": "dataverse.html#before-you-start",
     "title": "RFS Dataverse",
     "section": "Before You Start",
-    "text": "Before You Start\nBefore creating a dataset, we recommend that you:\n\nOrganize the replication package locally with a clear folder structure, a README describing how to reproduce every table and figure in the paper, and a LICENSE file.\nVerify that no large output files, intermediate caches, or restricted-access data are included unintentionally.\n\nIf you are unsure whether a particular file should be included, the Data Editors are happy to advise before you upload."
+    "text": "Before You Start\nBefore creating a dataset, we recommend that you:\n\nOrganize the replication package locally with a clear folder structure, a README describing how to reproduce every table and figure in the paper, and a LICENSE file.\nVerify that no large output files, intermediate caches, or restricted-access data are included unintentionally.\nVerify that the provided code runs successfully through the entire pipeline, from data preparation to final results.\n\nIf you are unsure whether a particular file should be included, the Data Editors are happy to advise before you upload."
   },
   {
     "objectID": "dataverse.html#step-1-create-the-dataset",
