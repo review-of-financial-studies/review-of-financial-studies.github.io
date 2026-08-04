@@ -108,7 +108,7 @@ For **each data source**:
 **Also check:**
 - Is there a summary table of all datasets?
 - Is it complete and internally consistent?
-- Is there a data dictionary or codebook, and is its location stated?
+- Instead of a codebook, is pseudo-data and/or original data that mirrors the original data provided, and is its location stated?
 - Have all proprietary/licensed datasets been removed from the public upload?
 - Is pseudo-data provided where real data cannot be shared?
 - Is it stated that the pseudo-data successfully runs the code?
@@ -163,13 +163,13 @@ For **each data source**:
 > | `data/raw/cpi.dta` | FRED | CPI index | Yes |
 > | `data/analysis/main.dta` | Derived | Final analysis dataset | Yes |
 
-*Data dictionary:*
+*Data mirroring the original data (instead of a codebook):*
 
-> Variable labels are included in the `pseudo-data.dta` files.
+> Instead of a codebook, the replication package includes the original data files with variable labels in `data/raw/`.
 
 or
 
-> A full codebook that describes each variable and table is provided in `codebook.xlsx`.
+> Instead of a codebook, the replication package includes pseudo-data in `data/pseudo/` that mirrors the original data: the files have the same names, variable names, types, and value ranges as the original data, so each variable can be inspected directly.
 
 *Proprietary data removed:*
 
