@@ -202,15 +202,15 @@ or
 
 *Software and packages:*
 
-> The code was last run using Stata 18 MP. The required user-written packages are `estout` (v3.31), `reghdfe` (v6.12.3), `ftools` (v2.49.1), and `require` (v1.0.4). `ftools` and `require` are dependencies of `reghdfe`. All packages are included in the `ado` directory.
+> The code was last run using Stata 18 MP. The required user-written packages are `estout` (3.31), `reghdfe` (1.3.1), `ftools` (2.50.0), and `require` (1.3.1). `ftools` and `require` are dependencies of `reghdfe`. All packages are included in the `ado` directory.
 
 or
 
-> The code was last run using Python 3.12. The core packages are: polars, plotnine, pyfixest. All dependencies and their exact versions are recorded in `pyproject.toml` and `uv.lock`.
+> The code was last run using Python 3.12. The core packages are: `polars` (1.35.2), `plotnine` (0.15.1), and `pyfixest` (0.40.1). All dependencies and their exact versions are recorded in `pyproject.toml` and `uv.lock`.
 
 or
 
-> The code was last run using R 4.4.1. The core packages are: dplyr, ggplot2, fixest. All dependencies and their exact versions are recorded in `renv.lock`.
+> The code was last run using R 4.4.1. The core packages are: `dplyr` (1.1.4), `ggplot2` (4.0.1), and `fixest` (0.13.2). All dependencies and their exact versions are recorded in `renv.lock`.
 
 *Setup script:*
 
