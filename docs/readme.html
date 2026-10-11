@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8c38fd85d21bfe44b50360969156fb14.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6191c8c4c757b97205a8995aa6c30869.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -325,11 +328,13 @@ Important
       title: "Title and Overview",
       questions: [
         {
+          id: "title-authors",
           text: "What is the exact title of the paper, and who are the authors?",
           label: "My README includes the title and authors.",
           example: `Replication package for "Firm Characteristics and the Cross Section of Stock Returns" by Jane Doe and John Smith.`
         },
         {
+          id: "overview",
           text: "In one short paragraph, what does this replication package contain, and how should a replicator proceed from start to finish?",
           label: "My README includes a brief overview of the replication package.",
           example: `This replication package contains code and data required to reproduce all tables and figures in the paper. The workflow consists of (i) downloading and cleaning raw data from public sources, (ii) constructing the final analysis dataset, and (iii) running estimation routines that generate the results. All steps can be executed by running the main script main.do. Total runtime is approximately 2 hours.
@@ -344,6 +349,7 @@ This replication package contains code and pseudo-data that allow users to run t
       title: "Data Availability and Provenance",
       questions: [
         {
+          id: "external-data",
           text: "Does the paper use any external (non-simulated) data?",
           label: "I have indicated whether external data are used.",
           example: `This paper analyzes external data.
@@ -357,6 +363,7 @@ This paper does not involve analyzing external data; all data are simulated with
 All data are publicly available and downloaded automatically by the replication code.`
         },
         {
+          id: "data-rights",
           text: "Do you provide statements about rights?",
           label: "My README includes data rights statements.",
           example: `I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
@@ -364,11 +371,13 @@ All data are publicly available and downloaded automatically by the replication 
 I certify that the author(s) of the manuscript have documented permission to redistribute/publish the data contained within this replication package.`
         },
         {
+          id: "data-license",
           text: "Under what license are the data distributed?",
           label: "My README includes a data license statement.",
           example: `The data are distributed under a Creative Commons Attribution 4.0 (CC-BY 4.0) license. See LICENSE.txt for details.`
         },
         {
+          id: "data-availability",
           text: "What is the overall public availability status of the data?",
           label: "I have indicated the public availability status of the data.",
           example: `All data are publicly available.
@@ -387,6 +396,7 @@ All data are included in the replication package.`
       title: "Summary and Details of Data Sources",
       questions: [
         {
+          id: "data-sources",
           text: "For each data source, where does the data come from, what format is it in, how did you obtain access, and is it included with your replication package?",
           label: "My README includes detailed information about each data source.",
           example: `The unemployment rate data is downloaded from the Federal Reserve Economic Data (FRED) database maintained by the Federal Reserve Bank of St. Louis. The data series UNRATE contains the U.S. civilian unemployment rate as a percentage of the civilian labor force.
@@ -427,6 +437,7 @@ Download method: Data are downloaded via the WRDS web interface
 Provided: No (licensed data cannot be redistributed)`
         },
         {
+          id: "data-summary-table",
           text: "Can you summarize all datasets in a table?",
           label: "My README includes a summary table of all datasets.",
           example: `| Data file | Source | Notes | Provided |
@@ -436,6 +447,7 @@ Provided: No (licensed data cannot be redistributed)`
 | \`data/analysis/main.dta\` | Derived | Final analysis dataset | Yes |`
         },
         {
+          id: "original-or-pseudo-data",
           text: "Instead of a codebook, do you provide pseudo-data and/or original data that mirrors the structure of the original data?",
           label: "I have included pseudo-data and/or original data that mirrors the original data.",
           example: `Instead of a codebook, the replication package includes the original data files with variable labels in \`data/raw/\`.
@@ -445,16 +457,19 @@ Provided: No (licensed data cannot be redistributed)`
 Instead of a codebook, the replication package includes pseudo-data in \`data/pseudo/\` that mirrors the original data: the files have the same names, variable names, types, and value ranges as the original data, so each variable can be inspected directly.`
         },
         {
+          id: "no-licensed-data",
           text: "Did you remove all licensed/proprietary data in the replication package that you upload to the RFS Dataverse?",
           label: "My replication package contains only publicly shareable data.",
           example: `The replication package does not violate license agreements.`
         },
         {
+          id: "pseudo-data",
           text: "Does your replication package contain pseudo-data for those data sources that cannot be shared publicly?",
           label: "For non-shareable data, I have included pseudo-data in the replication package.",
           example: `The replication package includes pseudo-data when the raw data cannot be shared. We have verified that the pseudo-data allows the replication code to execute without errors.`
         },
         {
+          id: "data-preservation",
           text: "For confidential data, do you commit to preserving it for a specified period?",
           label: "I have included a data preservation statement for confidential data.",
           example: `The authors preserve all confidential data for five years after publication.`
@@ -465,6 +480,7 @@ Instead of a codebook, the replication package includes pseudo-data in \`data/ps
       title: "Computational Requirements",
       questions: [
         {
+          id: "software",
           text: "What software is required, and do you include versions and packages?",
           label: "My README includes detailed software requirements.",
           example: `The code was last run using Stata 18 MP. The required user-written packages are estout (3.31), reghdfe (1.3.1), ftools (2.50.0), and  require (1.3.1). ftools and require are dependencies of reghdfe. ftools and require are dependencies of reghdfe. All packages are included in the ado directory.
@@ -478,6 +494,7 @@ The code was last run using Python 3.12. The core packages are: polars (1.35.2),
 The code was last run using R 4.4.1. The core packages are: dplyr (1.1.4), ggplot2 (4.0.1), and fixest (0.13.2). All dependencies and their exact versions are recorded in renv.lock.`
         },
         {
+          id: "setup",
           text: "Is there an automated setup or dependency installation script?",
           label: "My README includes setup instructions or an installation script.",
           example: `The replication package includes setup.do, which installs all required packages and creates the necessary directory structure.
@@ -491,6 +508,7 @@ By running uv sync, the required packages and their versions are installed.
 By running renv::restore(), the required packages and their versions are installed.`
         },
         {
+          id: "randomness",
           text: "Does the analysis rely on randomness, and if so, how is it controlled?",
           label: "I have included information about random number generation.",
           example: `Random seed is set at line 12 of the program programs/config.do.
@@ -504,6 +522,7 @@ The analysis relies on random number generation, but setting a seed is not possi
 No pseudo-random number generator is used in the analysis.`
         },
         {
+          id: "runtime",
           text: "How long does replication take on a standard desktop machine?",
           label: "My README includes estimated runtime information.",
           example: `Approximate time needed to reproduce the analyses on a standard (2026) desktop machine: 10-60 minutes.
@@ -513,6 +532,7 @@ No pseudo-random number generator is used in the analysis.`
 Approximate time needed to reproduce the analyses on a scientific computing cluster with 200 cores: 4 days. In particular, programs/monte_carlo.py takes 90% of the computing time.`
         },
         {
+          id: "storage",
           text: "How much disk space (storage) is required, separately for the pseudo-data run and the original data run?",
           label: "My README includes estimated storage requirements for both the pseudo-data and original data runs.",
           example: `Approximate storage space needed for the pseudo-data run: 25 MB - 250 MB.
@@ -522,6 +542,7 @@ Approximate time needed to reproduce the analyses on a scientific computing clus
 Approximate storage space needed for the original data run: 5 GB - 50 GB.`
         },
         {
+          id: "memory-cpu",
           text: "What are the memory (RAM) and CPU requirements, separately for the pseudo-data run and the original data run, and on what type of machine was the code last run?",
           label: "My README includes memory and CPU requirements for both the pseudo-data and original data runs, and describes the machine used.",
           example: `The code was last run on a 4-core laptop running macOS 14 with 16 GB RAM and approximately 50 GB of free disk space.
@@ -533,11 +554,13 @@ Pseudo-data run: 2 CPU cores and 8 GB RAM.
 Original data run: 16 CPU cores and 64 GB RAM.`
         },
         {
+          id: "forward-slashes",
           text: "Does your code use forward slashes for file paths to ensure the package works across operating systems?",
           label: "I only use forward slashes for file paths in my code.",
           example: `All programs consistently use forward slashes ("/") for file paths to ensure compatibility across different operating systems.`
         },
         {
+          id: "relative-paths",
           text: "Does the code use relative paths from the project root?",
           label: "My code uses relative paths from the project root.",
           example: `All file paths are defined relative to the project root, minimizing the need for manual path adjustments and improving portability.`
@@ -548,6 +571,7 @@ Original data run: 16 CPU cores and 64 GB RAM.`
       title: "Description of Programs",
       questions: [
         {
+          id: "entry-point",
           text: "What is the main entry point for replication?",
           label: "My README specifies the main entry point for replication.",
           example: `Opening main.do automatically identifies the project root and running it executes all steps in the correct sequence.
@@ -557,11 +581,13 @@ Original data run: 16 CPU cores and 64 GB RAM.`
 Set the path in programs/main.do to the root of the project directory. Executing the script will then run all steps in the correct sequence.`
         },
         {
+          id: "ordering",
           text: "Are there ordering dependencies or special execution rules?",
           label: "My README describes any ordering dependencies or special execution rules.",
           example: `Programs in 02_analysis must be run sequentially, as later scripts depend on outputs from earlier ones.`
         },
         {
+          id: "code-license",
           text: "What license governs the code?",
           label: "My README includes a code license statement.",
           example: `The code is licensed under the MIT License. See LICENSE.txt for details.`
@@ -572,6 +598,7 @@ Set the path in programs/main.do to the root of the project directory. Executing
       title: "Instructions to Replicators",
       questions: [
         {
+          id: "replication-steps",
           text: "What exact steps should a replicator follow, in order?",
           label: "My README includes step-by-step replication instructions.",
           example: `1. Ensure you have Python 3.13 installed
@@ -581,6 +608,7 @@ Set the path in programs/main.do to the root of the project directory. Executing
 5. Run uv run python main.py`
         },
         {
+          id: "manual-steps",
           text: "Are there any manual or non-automated steps?",
           label: "My README specifies any manual or non-automated steps.",
           example: `No manual steps are required; all procedures are fully automated.
@@ -590,6 +618,7 @@ Set the path in programs/main.do to the root of the project directory. Executing
 Figure 1 must be generated manually using Excel by following the instructions below.`
         },
         {
+          id: "verified-steps",
           text: "Did you verify that the steps for replicators work as intended?",
           label: "I have verified that the replication instructions work as intended.",
           example: `The authors verified that the instructions ran successfully in a clean environment on their local machine before submission, and the data editors independently verified them again.`
@@ -600,6 +629,7 @@ Figure 1 must be generated manually using Excel by following the instructions be
       title: "List of Tables and Programs",
       questions: [
         {
+          id: "tables-figures",
           text: "Which tables and figures are reproduced by the provided code?",
           label: "My README includes a list of all tables and figures, along with the scripts that generate them.",
           example: `All tables and figures in the main paper.
@@ -609,6 +639,7 @@ Figure 1 must be generated manually using Excel by following the instructions be
 All tables and figures in the paper and the online appendix.`
         },
         {
+          id: "tables-figures-summary",
           text: "For each table and figure, where is it generated, and how are the output files named?",
           label: "My README includes a summary table listing all tables and figures, along with the corresponding programs and output files.",
           example: `| Figure/Table | Program | Output file | Notes |
@@ -622,6 +653,7 @@ All tables and figures in the paper and the online appendix.`
       title: "References",
       questions: [
         {
+          id: "data-citations",
           text: "Are all datasets, even confidential ones, cited?",
           label: "My README includes citations for all datasets used.",
           example: `Standard and Poor's (S&P). 2024. Compustat-Capital IQ. Wharton Research Data Services. https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/sp-global-market-intelligence/
@@ -636,6 +668,7 @@ Center for Research in Security Prices (CRSP). 2026. CRSP Stock File. Wharton Re
       title: "Acknowledgements",
       questions: [
         {
+          id: "acknowledgements",
           text: "Did you adapt templates, reuse text, or receive permission for materials?",
           label: "My README includes acknowledgements for templates adapted or text reused.",
           example: `This README template was adapted from the Social Science Data Editors' README template, available at https://social-science-data-editors.github.io/template_README/`
@@ -666,13 +699,16 @@ Center for Research in Security Prices (CRSP). 2026. CRSP Stock File. Wharton Re
 
       section.questions.forEach((q, qIdx) => {
         totalQuestions++;
-        const qId = `q${sIdx}_${qIdx}`;
+        const qId = q.id || `q${sIdx}_${qIdx}`;
 
         const questionEl = document.createElement('div');
         questionEl.className = 'question';
         questionEl.id = qId;
         questionEl.innerHTML = `
-          <div class="question-text">${q.text}</div>
+          <div class="question-text">
+            <span class="question-text-body">${q.text}</span>
+            <a class="question-link" href="#${qId}" title="Copy link to this item" aria-label="Copy link to this item" onclick="copyQuestionLink(event, '${qId}')"><i class="bi bi-link-45deg"></i></a>
+          </div>
           <div class="checkbox-group">
             <label class="checkbox-label">
               <input type="checkbox" data-section="${sIdx}" data-question="${qIdx}" onchange="updateProgress()">
@@ -693,14 +729,53 @@ Center for Research in Security Prices (CRSP). 2026. CRSP Stock File. Wharton Re
 
     document.getElementById('totalCount').textContent = totalQuestions;
     updateProgress();
+    openLinkedQuestion();
+    window.addEventListener('hashchange', openLinkedQuestion);
+    // Re-align after late layout shifts (fonts, images) on initial load
+    if (document.readyState !== 'complete') {
+      window.addEventListener('load', function () {
+        const questionEl = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+        if (questionEl && questionEl.classList.contains('question')) questionEl.scrollIntoView({ block: 'start' });
+      }, { once: true });
+    }
   }
 
-  function toggleExample(qId) {
+  // Scroll to the question referenced in the URL hash and unfold its example
+  function openLinkedQuestion() {
+    const qId = decodeURIComponent(window.location.hash.slice(1));
+    const questionEl = qId && document.getElementById(qId);
+    if (!questionEl || !questionEl.classList.contains('question')) return;
+
+    toggleExample(qId, true);
+    questionEl.scrollIntoView({ block: 'start' });
+    questionEl.classList.remove('linked');
+    void questionEl.offsetWidth; // restart the highlight animation
+    questionEl.classList.add('linked');
+  }
+
+  function copyQuestionLink(event, qId) {
+    event.preventDefault();
+    const url = `${window.location.origin}${window.location.pathname}#${qId}`;
+    history.replaceState(null, '', `#${qId}`);
+    const linkEl = event.currentTarget;
+    navigator.clipboard.writeText(url).then(function () {
+      linkEl.classList.add('copied');
+      linkEl.title = 'Link copied!';
+      setTimeout(function () {
+        linkEl.classList.remove('copied');
+        linkEl.title = 'Copy link to this item';
+      }, 2000);
+    }).catch(function () {
+      // Clipboard unavailable; the link is still in the address bar
+    });
+  }
+
+  function toggleExample(qId, forceOpen) {
     const exampleEl = document.getElementById(`${qId}_example`);
     const toggleBtn = exampleEl.previousElementSibling;
 
-    exampleEl.classList.toggle('visible');
-    toggleBtn.classList.toggle('open');
+    exampleEl.classList.toggle('visible', forceOpen || !exampleEl.classList.contains('visible'));
+    toggleBtn.classList.toggle('open', exampleEl.classList.contains('visible'));
 
     if (exampleEl.classList.contains('visible')) {
       toggleBtn.innerHTML = '<span class="arrow">▶</span> Hide example';
@@ -762,7 +837,7 @@ Center for Research in Security Prices (CRSP). 2026. CRSP Stock File. Wharton Re
       const missing = [];
       checkboxes.forEach(cb => {
         if (!cb.checked) {
-          const questionText = cb.closest('.question').querySelector('.question-text').textContent;
+          const questionText = cb.closest('.question').querySelector('.question-text-body').textContent;
           missing.push(questionText);
         }
       });

@@ -137,6 +137,53 @@
   border-color: var(--accent);
 }
 
+/* Leave room for the navbar and sticky progress bar when jumping to a linked item */
+.readme-checker .question {
+  scroll-margin-top: 140px;
+}
+
+.readme-checker .question.linked {
+  animation: linkedHighlight 2.5s ease;
+}
+
+@keyframes linkedHighlight {
+  0%, 40% { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+  100% { box-shadow: none; }
+}
+
+.readme-checker .question-link {
+  margin-left: auto;
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.readme-checker .question:hover .question-link,
+.readme-checker .question-link:focus,
+.readme-checker .question-link.copied {
+  opacity: 1;
+}
+
+.readme-checker .question-link:hover {
+  color: var(--accent);
+}
+
+.readme-checker .question-link.copied {
+  color: var(--success);
+}
+
+.readme-checker .question-link.copied i::before {
+  content: "\F272"; /* bi-check2 */
+}
+
+@media (hover: none) {
+  .readme-checker .question-link {
+    opacity: 1;
+  }
+}
+
 .readme-checker .question.answered {
   border-color: var(--success);
   box-shadow: inset 3px 0 0 var(--success);
