@@ -127,7 +127,7 @@ For **each data source**:
 > - Format: CSV
 > - License: Public domain (U.S. government data)
 > - Download method: The code automatically downloads the data via the URL
-> - Provided: Yes
+> - Original data included: Yes
 
 *Subscription-based source:*
 
@@ -140,7 +140,7 @@ For **each data source**:
 > - Format: Proprietary database export (CSV/Excel)
 > - License: Proprietary; redistribution not permitted under standard licensing terms
 > - Download method: Data are manually downloaded via the Morningstar Direct platform
-> - Provided: No (licensed data cannot be redistributed)
+> - Original data included: No (pseudo instead of licensed data)
 
 *WRDS/CRSP source:*
 
@@ -153,11 +153,11 @@ For **each data source**:
 > - Format: Proprietary database export (CSV)
 > - License: Proprietary; redistribution not permitted under standard licensing terms
 > - Download method: Data are downloaded via the WRDS web interface
-> - Provided: No (licensed data cannot be redistributed)
+> - Original data included: No (pseudo instead of licensed data)
 
 *Summary table:*
 
-> | Data file | Source | Notes | Provided |
+> | Data file | Source | Notes | Original data included |
 > |---|---|---|---|
 > | `data/raw/unrate.dta` | FRED | Unemployment rate | Yes |
 > | `data/raw/cpi.dta` | FRED | CPI index | Yes |
