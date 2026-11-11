@@ -2,7 +2,9 @@
 title: "README"
 format:
     html:
-        css: assets/css/readme.css
+        css:
+            - assets/css/readme.css
+            - assets/css/prompt.css
 ---
 
 ::: {.callout-important}
@@ -14,7 +16,7 @@ The DE will enforce the [template README](https://social-science-data-editors.gi
 Unfold the prompt below and copy it to use with the LLM of your choice for detailed feedback on your README. Be aware that LLMs like Claude or ChatGPT will rarely tell you your README is fine as-is. They tend to suggest changes whether or not changes are needed. Use your judgment to decide which suggestions are worth acting on.
 
 ```{=html}
-<div class="prompt-section">
+<div class="prompt-section" data-prompt-src="assets/prompts/readme-review.txt">
   <details class="prompt-details">
     <summary class="prompt-summary">
       <span class="prompt-summary-arrow">▶</span>
@@ -22,108 +24,13 @@ Unfold the prompt below and copy it to use with the LLM of your choice for detai
     </summary>
     <div class="prompt-content">
       <div class="prompt-actions">
-        <button class="copy-prompt-btn" id="copyPromptBtn" onclick="copyPrompt()">Copy to clipboard</button>
+        <button type="button" class="copy-prompt-btn">Copy to clipboard</button>
       </div>
-      <pre id="promptText" class="prompt-text">Loading prompt…</pre>
+      <pre class="prompt-text">Loading prompt…</pre>
     </div>
   </details>
 </div>
-
-<style>
-  .prompt-section { margin: 1rem 0 2rem 0; }
-  .prompt-details {
-    border: 1px solid #d0d7de;
-    border-radius: 6px;
-    background: #f6f8fa;
-  }
-  .prompt-summary {
-    cursor: pointer;
-    padding: 0.75rem 1rem;
-    font-weight: 600;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    user-select: none;
-  }
-  .prompt-summary::-webkit-details-marker { display: none; }
-  .prompt-summary-arrow {
-    display: inline-block;
-    transition: transform 0.15s ease;
-    font-size: 0.75rem;
-  }
-  .prompt-details[open] .prompt-summary-arrow { transform: rotate(90deg); }
-  .prompt-content {
-    border-top: 1px solid #d0d7de;
-    padding: 1rem;
-    background: #ffffff;
-    border-radius: 0 0 6px 6px;
-  }
-  .prompt-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 0.75rem;
-  }
-  .copy-prompt-btn {
-    cursor: pointer;
-    background: #0969da;
-    color: #ffffff;
-    border: none;
-    padding: 0.4rem 0.9rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  .copy-prompt-btn:hover { background: #0860c7; }
-  .copy-prompt-btn.copied { background: #1a7f37; }
-  .prompt-text {
-    background: #f6f8fa;
-    border: 1px solid #d0d7de;
-    border-radius: 6px;
-    padding: 1rem;
-    margin: 0;
-    max-height: 500px;
-    overflow: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    font-size: 0.85rem;
-    line-height: 1.5;
-  }
-</style>
-
-<script>
-  (function loadPrompt() {
-    fetch('assets/prompts/readme-review.txt')
-      .then(function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.text();
-      })
-      .then(function (text) {
-        document.getElementById('promptText').textContent = text;
-      })
-      .catch(function () {
-        document.getElementById('promptText').textContent =
-          'Could not load the prompt file. See assets/prompts/readme-review.txt in the repository.';
-      });
-  })();
-
-  function copyPrompt() {
-    var text = document.getElementById('promptText').textContent;
-    var btn = document.getElementById('copyPromptBtn');
-    navigator.clipboard.writeText(text).then(function () {
-      var original = btn.textContent;
-      btn.textContent = '✓ Copied!';
-      btn.classList.add('copied');
-      setTimeout(function () {
-        btn.textContent = original;
-        btn.classList.remove('copied');
-      }, 2000);
-    }).catch(function () {
-      btn.textContent = 'Copy failed';
-      setTimeout(function () { btn.textContent = 'Copy to clipboard'; }, 2000);
-    });
-  }
-</script>
+<script src="assets/js/prompt.js"></script>
 ```
 
 ## Interactive checklist

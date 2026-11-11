@@ -31,3 +31,4 @@ format:
     email-obfuscation: javascript
     resources: 
       - "assets/prompts/*.txt"
+      - "assets/js/*.js"
