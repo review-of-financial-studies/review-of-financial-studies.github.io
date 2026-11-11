@@ -12,7 +12,7 @@ Pseudo-data are artificial data that mimic the structure of the original data (f
 
 - **Every submission can be checked**: With pseudo-data, the DE can verify that the code runs without errors for all submissions.
 - **Original data stay untouched**: The DE sets up and tests the full computational environment on pseudo-data first. Original data enter the secure environment only once the code runs cleanly, which minimizes their exposure and keeps the verification step short. Pseudo-data runs can also be significantly faster due to their narrower scope.
-- **Documentation that works**: Future replicators receive data that show exactly what the code expects. Unlike codebooks, which are often incomplete or outdated, pseudo-data are a working documentation of the data structure that replicators can use to adapt the code to their own data access.
+- **Documentation that works**: Future replicators receive data that show exactly what the code expects. Unlike codebooks, which are often incomplete or outdated, pseudo-data serve as working documentation of the data structure that replicators can use to adapt the code to their own data access.
 
 ## Generation prompt
 

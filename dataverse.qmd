@@ -48,7 +48,7 @@ Two fields on the new-dataset form deserve special attention:
 Fill in the metadata fields according to the prompts in the template. A few notes:
 
 - **Title.** Use the full title of your paper exactly as it appears (or will appear) in the *RFS* and place it without quotation marks after "Replication Package for:".
-- **Authors.** Add all coauthors in the same order as on the paper. Include affiliations and, where possible, ORCID identifiers. Tthese improve discoverability and link the dataset cleanly to author profiles.
+- **Authors.** Add all coauthors in the same order as on the paper. Include affiliations and, where possible, ORCID identifiers. These improve discoverability and link the dataset cleanly to author profiles.
 - **Description.** A few sentences describing the contents of the replication package. 
 - **Subject.** Most RFS authors select **Business and Management**. Additional subjects can be added if they apply.
 
@@ -73,8 +73,8 @@ You can upload files via drag-and-drop or by clicking **Select Files to Add**. A
 - **File-size limits.** If you hit the per-file size limit, please contact the Data Editors before splitting files arbitrarily. Large datasets can usually be reduced significantly by:
   - converting inefficient formats such as CSV to a columnar format such as Parquet;
   - dropping variables or observations that are not used anywhere in the code;
-  - storing intermediate objects (e.g. cached estimation results) outside the package and regenerating them from the code.
-- **Sensitive or proprietary data.** If your data cannot be redistributed (e.g. WRDS, CRSP, or other vendor data subject to licensing), upload only [pseudo-data](pseudo-data.qmd) that mirrors the structure of the original data but not their statistical properties. Many authors choose to include a reschuffeld subsample of the data. Do not upload restricted data.
+  - storing intermediate objects (e.g., cached estimation results) outside the package and regenerating them from the code.
+- **Sensitive or proprietary data.** If your data cannot be redistributed (e.g., WRDS, CRSP, or other vendor data subject to licensing), upload only [pseudo-data](pseudo-data.qmd) that mirror the structure of the original data but not their statistical properties. Many authors choose to include a reshuffled subsample of the data. Do not upload restricted data.
 
 ![Upload files to the dataset](assets/img/dataverse-upload.png)
 
