@@ -1,0 +1,14 @@
+Please create pseudo-data for the attached replication folder. The folder contains a README with all necessary information on the package, the data sources, and which data files cannot be shared. The real data are in the folder. Create pseudo-data that replace the restricted data files and allow the entire code to run from start to finish. The results do not need to be meaningful, but the data should resemble the real data in structure and plausible values.
+
+Before you start, move each data file that cannot be shared into a subfolder named "_original" within the directory where the file is located. Do not rename or delete any original files.
+
+Rules:
+- Only execute code on the original data that extracts summary statistics. Never print, copy, or reuse individual records.
+- Do not modify any existing code or the README. The data must fit the code, not the other way around.
+- Use exactly the original file names, paths, and formats the code expects for the pseudo-data. No additional files and no prefixes or suffixes such as "pseudo" or "synthetic".
+- Keep every column of each original file with the same names, order, and types, even if the code does not use them.
+- Keep the pseudo-data as small as possible while still allowing all code to run, e.g., by reducing the number of entities rather than columns or the sample period.
+- Make sure identifiers are consistent across files so that all merges work.
+- Set seeds for all random draws.
+
+Include the script that generates the pseudo-data in the replication folder. Finally, verify that the full code runs without errors on the pseudo-data from the main entry point and produces all tables and figures listed in the README.

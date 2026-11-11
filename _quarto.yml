@@ -14,6 +14,8 @@ website:
         href: faqs.qmd
       - text: "README"
         href: readme.qmd
+      - text: "Pseudo-Data"
+        href: pseudo-data.qmd
       - text: "License"
         href: license.qmd
       - text: "RFS Dataverse"
@@ -29,3 +31,4 @@ format:
     email-obfuscation: javascript
     resources: 
       - "assets/prompts/*.txt"
+      - "assets/js/*.js"
