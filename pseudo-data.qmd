@@ -38,3 +38,8 @@ Unfold the prompt below and copy it to use with an LLM agent of your choice that
 </div>
 <script src="assets/js/prompt.js"></script>
 ```
+
+::: {.callout-warning}
+## Remove the original data before uploading
+The prompt keeps your original files by moving them into `_original` subfolders next to the pseudo-data. Move all `_original` folders out of the replication folder before you upload the package to the [RFS Dataverse](dataverse.qmd). Keep the original files, since you will need them for the verification step.
+:::

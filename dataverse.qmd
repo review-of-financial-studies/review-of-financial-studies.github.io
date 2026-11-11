@@ -19,7 +19,7 @@ The RFS Dataverse is the official archive for replication materials accompanying
 Before creating a dataset, we recommend that you:
 
 1. Organize the replication package locally with a clear folder structure, a [`README`](readme.qmd) describing how to reproduce every table and figure in the paper, and a [`LICENSE` file](license.qmd). 
-2. Verify that no large output files, intermediate caches, or restricted-access data are included unintentionally.
+2. Verify that no large output files, intermediate caches, or restricted-access data are included unintentionally. This includes backup copies of original data that you may have kept alongside pseudo-data.
 3. Verify that the provided code runs successfully through the entire pipeline, from data preparation to final results.
 
 If you are unsure whether a particular file should be included, the Data Editors are happy to advise *before* you upload.
