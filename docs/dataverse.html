@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Before creating a dataset, we recommend that you:</p>
 <ol type="1">
 <li>Organize the replication package locally with a clear folder structure, a <a href="./readme.html"><code>README</code></a> describing how to reproduce every table and figure in the paper, and a <a href="./license.html"><code>LICENSE</code> file</a>.</li>
-<li>Verify that no large output files, intermediate caches, or restricted-access data are included unintentionally.</li>
+<li>Verify that no large output files, intermediate caches, or restricted-access data are included unintentionally. This includes backup copies of original data that you may have kept alongside pseudo-data.</li>
 <li>Verify that the provided code runs successfully through the entire pipeline, from data preparation to final results.</li>
 </ol>
 <p>If you are unsure whether a particular file should be included, the Data Editors are happy to advise <em>before</em> you upload.</p>
@@ -273,7 +273,7 @@ Warning
 <li>dropping variables or observations that are not used anywhere in the code;</li>
 <li>storing intermediate objects (e.g., cached estimation results) outside the package and regenerating them from the code.</li>
 </ul></li>
-<li><strong>Sensitive or proprietary data.</strong> If your data cannot be redistributed (e.g., WRDS, CRSP, or other vendor data subject to licensing), upload only <a href="./pseudo-data.html">pseudo-data</a> that mirror the structure of the original data but not their statistical properties. Many authors choose to include a reshuffled subsample of the data. Do not upload restricted data.</li>
+<li><strong>Sensitive or proprietary data.</strong> If your data cannot be redistributed (e.g., WRDS, CRSP, or other vendor data subject to licensing), upload only <a href="./pseudo-data.html">pseudo-data</a> that mirror the structure of the original data and contain plausible values but no actual records. Do not upload restricted data, not even as a subsample.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
