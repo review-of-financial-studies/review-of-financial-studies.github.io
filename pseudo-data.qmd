@@ -1,0 +1,132 @@
+---
+title: "Pseudo-Data"
+---
+
+::: {.callout-important}
+Every replication package must run from start to finish on the data included in the package. Replace any data that cannot be shared publicly with pseudo-data that have the same structure as the original data.
+:::
+
+## Why pseudo-data?
+
+Pseudo-data are artificial data that mimic the structure of the original data (file names, formats, variables, and types) without containing any actual records. The results they produce do not need to be meaningful. We consider pseudo-data a key part of every replication package for three reasons:
+
+- **Every submission can be checked**: With pseudo-data, the DE can verify that the code runs without errors for all submissions.
+- **Original data stay untouched**: The DE sets up and tests the full computational environment on pseudo-data first. Original data enter the secure environment only once the code runs cleanly, which minimizes their exposure and keeps the verification step short. Pseudo-data runs can also be significantly faster due to their narrower scope.
+- **Documentation that works**: Future replicators receive data that show exactly what the code expects. Unlike codebooks, which are often incomplete or outdated, pseudo-data are a working documentation of the data structure that replicators can use to adapt the code to their own data access.
+
+## Generation prompt
+
+Unfold the prompt below and copy it to use with an LLM agent of your choice that can access and run code on your replication folder (e.g., Claude Code or OpenAI Codex). Make sure that using such a tool on your data is permitted under your data use agreements. If it is not, use the prompt as a guide to create the pseudo-data yourself. Either way, review the result carefully before submission: confirm that no original records remain in the package and that the code runs from the main entry point.
+
+```{=html}
+<div class="prompt-section">
+  <details class="prompt-details">
+    <summary class="prompt-summary">
+      <span class="prompt-summary-arrow">▶</span>
+      <span class="prompt-summary-label">View pseudo-data generation prompt</span>
+    </summary>
+    <div class="prompt-content">
+      <div class="prompt-actions">
+        <button class="copy-prompt-btn" id="copyPromptBtn" onclick="copyPrompt()">Copy to clipboard</button>
+      </div>
+      <pre id="promptText" class="prompt-text">Loading prompt…</pre>
+    </div>
+  </details>
+</div>
+
+<style>
+  .prompt-section { margin: 1rem 0 2rem 0; }
+  .prompt-details {
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background: #f6f8fa;
+  }
+  .prompt-summary {
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+  }
+  .prompt-summary::-webkit-details-marker { display: none; }
+  .prompt-summary-arrow {
+    display: inline-block;
+    transition: transform 0.15s ease;
+    font-size: 0.75rem;
+  }
+  .prompt-details[open] .prompt-summary-arrow { transform: rotate(90deg); }
+  .prompt-content {
+    border-top: 1px solid #d0d7de;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 0 0 6px 6px;
+  }
+  .prompt-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
+  }
+  .copy-prompt-btn {
+    cursor: pointer;
+    background: #0969da;
+    color: #ffffff;
+    border: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .copy-prompt-btn:hover { background: #0860c7; }
+  .copy-prompt-btn.copied { background: #1a7f37; }
+  .prompt-text {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 0;
+    max-height: 500px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+</style>
+
+<script>
+  (function loadPrompt() {
+    fetch('assets/prompts/pseudo-data.txt')
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      })
+      .then(function (text) {
+        document.getElementById('promptText').textContent = text;
+      })
+      .catch(function () {
+        document.getElementById('promptText').textContent =
+          'Could not load the prompt file. See assets/prompts/pseudo-data.txt in the repository.';
+      });
+  })();
+
+  function copyPrompt() {
+    var text = document.getElementById('promptText').textContent;
+    var btn = document.getElementById('copyPromptBtn');
+    navigator.clipboard.writeText(text).then(function () {
+      var original = btn.textContent;
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(function () {
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(function () {
+      btn.textContent = 'Copy failed';
+      setTimeout(function () { btn.textContent = 'Copy to clipboard'; }, 2000);
+    });
+  }
+</script>
+```
