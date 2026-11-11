@@ -66,7 +66,7 @@ No. Proprietary data should **not** be uploaded to the RFS Dataverse.
 
 Your replication package should be prepared for eventual public release and may include:
 
-- Pseudo or synthetic data  
+- [Pseudo or synthetic data](pseudo-data.qmd)  
 - Detailed instructions enabling replication  
 
 The data editor will guide you through the process of securely sharing proprietary data for verification purposes only.
@@ -76,7 +76,7 @@ The data editor will guide you through the process of securely sharing proprieta
 <details>
 <summary>My submission uses **regulatory** or **on-premise data**. What should I do?</summary>
 
-Clearly describe data availability in the README file and provide pseudo-data with the same structure as the original dataset.
+Clearly describe data availability in the README file and provide pseudo-data with the same structure as the original dataset (see our [pseudo-data prompt](pseudo-data.qmd)).
 
 </details>
 

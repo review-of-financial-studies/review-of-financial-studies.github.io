@@ -74,7 +74,7 @@ You can upload files via drag-and-drop or by clicking **Select Files to Add**. A
   - converting inefficient formats such as CSV to a columnar format such as Parquet;
   - dropping variables or observations that are not used anywhere in the code;
   - storing intermediate objects (e.g. cached estimation results) outside the package and regenerating them from the code.
-- **Sensitive or proprietary data.** If your data cannot be redistributed (e.g. WRDS, CRSP, or other vendor data subject to licensing), upload only pseudo-data that mirrors the structure of the original data but not their statistical properties. Many authors choose to include a reschuffeld subsample of the data. Do not upload restricted data.
+- **Sensitive or proprietary data.** If your data cannot be redistributed (e.g. WRDS, CRSP, or other vendor data subject to licensing), upload only [pseudo-data](pseudo-data.qmd) that mirrors the structure of the original data but not their statistical properties. Many authors choose to include a reschuffeld subsample of the data. Do not upload restricted data.
 
 ![Upload files to the dataset](assets/img/dataverse-upload.png)
 
