@@ -108,10 +108,10 @@ For **each data source**:
 **Also check:**
 - Is there a summary table of all datasets?
 - Is it complete and internally consistent?
-- Instead of a codebook, is pseudo-data and/or original data that mirrors the original data provided, and is its location stated?
+- Instead of a codebook, are pseudo-data and/or original data that mirror the original data provided, and is its location stated?
 - Have all proprietary/licensed datasets been removed from the public upload?
-- Is pseudo-data provided where real data cannot be shared?
-- Is it stated that the pseudo-data successfully runs the code?
+- Are pseudo-data provided where real data cannot be shared?
+- Is it stated that the pseudo-data successfully run the code?
 - For confidential data, do the authors commit to preserving it for a specified period?
 
 **Best-practice examples:**
@@ -140,7 +140,7 @@ For **each data source**:
 > - Format: Proprietary database export (CSV/Excel)
 > - License: Proprietary; redistribution not permitted under standard licensing terms
 > - Download method: Data are manually downloaded via the Morningstar Direct platform
-> - Original data included: No (pseudo instead of licensed data)
+> - Original data included: No (pseudo-data instead of licensed data)
 
 *WRDS/CRSP source:*
 
@@ -153,7 +153,7 @@ For **each data source**:
 > - Format: Proprietary database export (CSV)
 > - License: Proprietary; redistribution not permitted under standard licensing terms
 > - Download method: Data are downloaded via the WRDS web interface
-> - Original data included: No (pseudo instead of licensed data)
+> - Original data included: No (pseudo-data instead of licensed data)
 
 *Summary table:*
 
@@ -169,7 +169,7 @@ For **each data source**:
 
 or
 
-> Instead of a codebook, the replication package includes pseudo-data in `data/pseudo/` that mirrors the original data: the files have the same names, variable names, types, and value ranges as the original data, so each variable can be inspected directly.
+> Instead of a codebook, the replication package includes pseudo-data in `data/pseudo/` that mirror the original data: the files have the same names, variable names, types, and value ranges as the original data, so each variable can be inspected directly.
 
 *Proprietary data removed:*
 
@@ -177,7 +177,7 @@ or
 
 *Pseudo-data:*
 
-> The replication package includes pseudo-data when the raw data cannot be shared. We have verified that the pseudo-data allows the replication code to execute without errors.
+> The replication package includes pseudo-data when the raw data cannot be shared. We have verified that the pseudo-data allow the replication code to execute without errors.
 
 *Data preservation:*
 
