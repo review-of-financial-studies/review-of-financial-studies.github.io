@@ -16,7 +16,7 @@ The data editor process unfolds in four phases following conditional acceptance.
 - **Preparation**: All conditionally accepted manuscripts enter the data editing process. A DE first assesses whether a CDSP review is required. If a review is needed, the DE contacts the corresponding author with onboarding instructions; otherwise, the handling editor is notified directly. Authors then prepare a replication package intended for eventual public release, replacing any non-redistributable data with pseudo or synthetic equivalents (see our [pseudo-data prompt](pseudo-data.qmd)). Every package must also include a comprehensive [README](https://social-science-data-editors.github.io/template_README/). To help authors prepare the README, the DE provides a [README prompt and checklist](readme.qmd) that walks through all required elements with best-practice examples. For other issues that arise during onboarding, please consult the [FAQs](faqs.qmd).
 - **Review**: Authors submit the prepared package via the [RFS Dataverse](https://dataverse.harvard.edu/dataverse/rfs), where it remains private throughout the review. The DE configures a secure, dedicated virtual environment on Nuvolos following the submitted README and verifies that the code executes successfully with the pseudo-data. If issues arise (e.g., execution errors, missing files, incomplete documentation, etc.), the DE sends requests to the authors, who revise and resubmit via the RFS Dataverse. This cycle continues until the code runs cleanly and the documentation is complete.
 - **Verification**: Once the code runs successfully on pseudo-data, the DE invites the authors into the secure environment to upload any raw data that cannot be shared publicly. The DE then executes the code with the original data and verifies that the code's output matches the results reported in the submitted manuscript. If the original raw data cannot be provided for verification, authors should reach out to the DE.
-- **Release**: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision. Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained. Authors then upload the resubmitted final version of the manuscript to Editorial Express. After final acceptance and publication, the DE may also host the verified code and accompanying report in a public GitHub repository under the [RFS organization](https://github.com/review-of-financial-studies).
+- **Release**: The DE submits a report to the handling editor summarizing the outcome of the verification process. The report typically details which data were available for verification and which results were verified or updated during the process. If the replication package yields results that differ substantially from those reported in the manuscript, the handling editor will determine whether to proceed with or reverse the original editorial decision. Upon successful verification, the DE releases the replication package on the RFS Dataverse and permanently and irrevocably deletes the virtual environment, along with any non-public data it contained. Authors then upload the resubmitted final version of the manuscript to Editorial Express. The handling editor then makes the final acceptance decision.
 
 Requests for exemption from the CDSP must be made at the time of *initial* submission — see the [Guidelines for Submission](https://sfs.org/guidelines-for-submissions/).
 
@@ -52,17 +52,21 @@ Experience from prior reviews indicates that a limited set of recurring issues a
 
 Beyond these general requirements, the topics summarized below frequently arise during review and should ideally be addressed prior to submission:
 
+::: {.table-scroll}
+
 | Topic | Stata | Python | R |
-|------|-------|--------|---|
+|--|----|----|----|
 | **Project execution** | Do not use `cd` to change directories within scripts. Launch Stata from the project root (e.g., open `main.do` in the root or use a Stata project file). | Do not use `os.chdir()`. Run code from the project root (e.g., `uv run python main.py` or `runpy.run_path()`), with all paths relative to the root. | Do not use `setwd()`. Run R from the project root (e.g., open the folder directly in RStudio, Positron, or VS Code). |
 | **File paths & portability** | Use relative paths with forward slashes (`/`). Avoid backslashes (`\`), which are Windows-specific. | Use relative paths with forward slashes (`/`) or `pathlib.Path`. Avoid hard-coded absolute paths. | Use relative paths with forward slashes (`/`). Do not rely on escaped backslashes (`\\`). |
 | **Dependency management** | Document the Stata environment and required packages in `setup.do` (`ado`-path included). | Use reproducible, cross-platform lockfiles (e.g., `uv`) rather than `pip freeze`-based `requirements.txt`. | Use `renv.lock` to document and restore the R environment. |
+
+:::
 
 ## Further Information
 
 - A list of common questions is maintained in the [FAQs](faqs.qmd).
 - The [README prompt and checklist](readme.qmd) walk through all required elements with best-practice examples.
-- The [pseudo-data prompt](pseudo-data.qmd) helps replace non-redistributable data with pseudo-data that allow the code to run.
+- The [pseudo-data prompt](pseudo-data.qmd) helps replace non-public data with pseudo-data that allow the code to run.
 - Recommended practices on [licensing](license.qmd) are also available.
 - A step-by-step guide explains how to upload replication packages to the [RFS Dataverse](dataverse.qmd).
 
